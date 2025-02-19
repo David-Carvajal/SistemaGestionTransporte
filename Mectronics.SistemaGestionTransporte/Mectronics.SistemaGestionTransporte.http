@@ -1,0 +1,6 @@
+@Mectronics.SistemaGestionTransporte_HostAddress = http://localhost:5253
+
+GET {{Mectronics.SistemaGestionTransporte_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
