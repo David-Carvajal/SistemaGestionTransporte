@@ -30,13 +30,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IConductor
         int Eliminar(int idConductorHorario);
 
         /// <summary>
-        /// Consulta un horario de conductor en la base de datos basada en los filtros proporcionados.
-        /// </summary>
-        /// <param name="objFiltro">Objeto <see cref="ConductorHorarioFiltro"/> con los criterios de búsqueda.</param>
-        /// <returns>Una instancia de <see cref="ConductorHorario"/> si se encuentra, de lo contrario, <c>null</c>.</returns>
-        ConductorHorario Consultar(ConductorHorarioFiltro objFiltro);
-
-        /// <summary>
         /// Consulta una lista de horarios de conductor en la base de datos según los filtros proporcionados.
         /// </summary>
         /// <param name="objFiltro">Objeto <see cref="ConductorHorarioFiltro"/> con los criterios de búsqueda.</param>

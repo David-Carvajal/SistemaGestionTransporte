@@ -24,11 +24,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorari
         int Eliminar(int idBusHorario);
 
         /// <summary>
-        /// Consulta un horario de bus en la base de datos basado en los filtros proporcionados.
-        /// </summary>
-        BusHorario Consultar(BusHorarioFiltro objFiltro);
-
-        /// <summary>
         /// Consulta una lista de horarios de buses en la base de datos.
         /// </summary>
         List<BusHorario> ConsultarListado(BusHorarioFiltro objFiltro);

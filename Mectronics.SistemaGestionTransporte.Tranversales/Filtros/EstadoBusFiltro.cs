@@ -12,11 +12,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public int IdEstadoBus { get; set; }
 
         /// <summary>
-        /// Nombre del estado del bus que se desea filtrar.
-        /// </summary>
-        public string NombreEstadoBus { get; set; }
-
-        /// <summary>
         /// Constructor de la clase <see cref="EstadoBusFiltro"/>.
         /// Inicializa una nueva instancia con valores predeterminados.
         /// </summary>
@@ -24,7 +19,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public EstadoBusFiltro()
         {
             IdEstadoBus = 0;
-            NombreEstadoBus = string.Empty;
+            
         }
     }
 }

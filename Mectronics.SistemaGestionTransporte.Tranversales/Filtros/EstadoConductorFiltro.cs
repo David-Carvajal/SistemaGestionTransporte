@@ -12,11 +12,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public int IdEstadoConductor { get; set; }
 
         /// <summary>
-        /// Nombre del estado del conductor que se desea filtrar.
-        /// </summary>
-        public string NombreEstado { get; set; }
-
-        /// <summary>
         /// Constructor de la clase <see cref="EstadoConductorFiltro"/>.
         /// Inicializa una nueva instancia con valores predeterminados.
         /// </summary>
@@ -24,7 +19,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public EstadoConductorFiltro()
         {
             IdEstadoConductor = 0;
-            NombreEstado = string.Empty;
         }
     }
 }

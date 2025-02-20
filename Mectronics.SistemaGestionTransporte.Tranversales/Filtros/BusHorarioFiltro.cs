@@ -12,11 +12,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public int IdBusHorario { get; set; }
 
         /// <summary>
-        /// Identificador único del bus asociado al horario.
-        /// </summary>
-        public int IdBus { get; set; }
-
-        /// <summary>
         /// Fecha específica del horario que se desea filtrar.
         /// </summary>
         public DateTime Fecha { get; set; }
@@ -33,7 +28,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public BusHorarioFiltro()
         {
             IdBusHorario = 0;
-            IdBus = 0;
             Fecha = DateTime.MinValue;
             DiaSemana = string.Empty;
         }

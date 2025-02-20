@@ -1,5 +1,6 @@
 ﻿
 using System.Data;
+using System.Transactions;
 using Microsoft.Data.SqlClient;
 
 namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces
@@ -25,6 +26,27 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces
         /// Cierra la conexión con la base de datos y libera los recursos utilizados.
         /// </summary>
         void Cerrar();
+
+        /// <summary>
+        /// Ejecuta una consulta SQL que devuelve un conjunto de resultados.
+        /// </summary>
+        /// <param name="consultaSql">Consulta SQL a ejecutar.</param>
+        /// <returns>Un <see cref="IDataReader"/> con los resultados de la consulta.</returns>
+        IDataReader EjecutarConsultaSql(string consultaSql);
+
+        /// <summary>
+        /// Ejecuta un comando SQL de tipo <c>UPDATE</c> o <c>DELETE</c>.
+        /// </summary>
+        /// <param name="comandoSql">Comando SQL a ejecutar.</param>
+        /// <returns>El número de filas afectadas por la ejecución del comando.</returns>
+        int EjecutarComandoSql(string comandoSql);
+
+        /// <summary>
+        /// Ejecuta un comando SQL de tipo <c>INSERT</c> y obtiene el ID del registro generado.
+        /// </summary>
+        /// <param name="comandoSql">Comando SQL a ejecutar.</param>
+        /// <returns>Identificador del nuevo registro.</returns>
+        object EjecutarEscalarSql(string comandoSql);
 
         /// <summary>
         /// Agrega un parámetro al comando SQL actual.

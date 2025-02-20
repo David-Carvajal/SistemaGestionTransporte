@@ -11,10 +11,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         /// </summary>
         public int IdRol { get; set; }
 
-        /// <summary>
-        /// Nombre del rol que se desea filtrar.
-        /// </summary>
-        public string NombreRol { get; set; }
 
         /// <summary>
         /// Constructor de la clase <see cref="RolFiltro"/>.
@@ -23,7 +19,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public RolFiltro()
         {
             IdRol = 0;
-            NombreRol = string.Empty;
         }
     }
 }

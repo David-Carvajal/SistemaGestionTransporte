@@ -32,7 +32,17 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
 
                 Usuario = new Usuario
                 {
-                    IdUsuario = lector.GetInt32(3) // Usuario asociado al conductor (Columna 3)
+                    IdUsuario = lector.GetInt32(3), // Usuario asociado al conductor (Columna 3)
+
+                    Nombre = lector.GetString(4),// Usuario asociado al conductor (Columna 4)
+
+                    Correo = lector.GetString(5),// Usuario asociado al conductor (Columna 5)
+
+                    Rol = new Rol
+                    {
+                        NombreRol = lector.GetString(6) // Nombre del rol asociado (Columna 6)
+                    }
+
                 }
             };
         }
