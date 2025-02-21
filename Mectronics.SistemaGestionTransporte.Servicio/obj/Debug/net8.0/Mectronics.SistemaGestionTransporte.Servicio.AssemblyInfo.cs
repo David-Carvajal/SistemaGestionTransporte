@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Mectronics.SistemaGestionTransporte.Repositorio")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Mectronics.SistemaGestionTransporte.Servicio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e3dc027c8ec95fbb333cdb70341bfb6aa0a51da")]
-[assembly: System.Reflection.AssemblyProductAttribute("Mectronics.SistemaGestionTransporte.Repositorio")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Mectronics.SistemaGestionTransporte.Repositorio")]
+[assembly: System.Reflection.AssemblyProductAttribute("Mectronics.SistemaGestionTransporte.Servicio")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Mectronics.SistemaGestionTransporte.Servicio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
+    <Folder Include="Mapeos\AutoMapper\" />
   </ItemGroup>
 
   <ItemGroup>

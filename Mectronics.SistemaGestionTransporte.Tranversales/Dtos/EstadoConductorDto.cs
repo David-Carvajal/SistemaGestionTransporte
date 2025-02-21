@@ -1,7 +1,10 @@
 ﻿
-namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
+namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
 {
-    public class EstadoConductor
+    /// <summary>
+    /// Representa el estado de un conductor en el sistema de transporte.
+    /// </summary>
+    public class EstadoConductorDto
     {
         /// <summary>
         /// Identificador único del estado del conductor.
@@ -12,11 +15,5 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// Descripción del estado del conductor.
         /// </summary>
         public string Estado { get; set; }
-
-        public EstadoConductor()
-        {
-            IdEstadoConductor = 0;
-            Estado = string.Empty;
-        }
     }
 }

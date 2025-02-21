@@ -1,7 +1,10 @@
 ﻿
-namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
+namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
 {
-    public class EstadoBus
+    /// <summary>
+    /// Representa el estado de un bus en el sistema de transporte.
+    /// </summary>
+    public class EstadoBusDto
     {
         /// <summary>
         /// Identificador único del estado del bus.
@@ -12,12 +15,5 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// Descripción del estado del bus.
         /// </summary>
         public string Estado { get; set; }
-
-
-        public EstadoBus()
-        {
-            IdEstadoBus = 0;
-            Estado = string.Empty;
-        }
     }
 }

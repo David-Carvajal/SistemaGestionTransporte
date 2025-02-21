@@ -1,7 +1,10 @@
 ﻿
-namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
+namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
 {
-    public class ConductorHorario
+    /// <summary>
+    /// Representa un horario asignado a un conductor en el sistema de transporte.
+    /// </summary>
+    public class ConductorHorarioDto
     {
         /// <summary>
         /// Identificador único del horario del conductor.
@@ -11,7 +14,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// <summary>
         /// Conductor asignado a este horario.
         /// </summary>
-        public Conductor Conductor { get; set; }
+        public ConductorDto Conductor { get; set; }
 
         /// <summary>
         /// Fecha del horario asignado.
@@ -36,17 +39,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// <summary>
         /// Bus asignado a este horario.
         /// </summary>
-        public Bus Bus { get; set; }
-
-        public ConductorHorario()
-        {
-            IdConductorHorario = 0;
-            Conductor = new Conductor();
-            Fecha = DateTime.MinValue;
-            DiaSemana = string.Empty;
-            HoraEntrada = DateTime.MinValue;
-            HoraSalida = DateTime.MinValue;
-            Bus = new Bus();
-        }
+        public BusDto Bus { get; set; }
     }
 }
