@@ -3,7 +3,10 @@
   "WorkspaceRootPath": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83248D2F-AA7C-4280-8E2A-DDF6B382D364}|..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.repositorio\\repositorios\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\interfaces\\ibushorario\\ibushorarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\interfaces\\ibus\\ibusservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,14 +25,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuarioRepositorio.cs",
-              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
-              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
-              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
-              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwFQAAAAVAAAAAAAAAA==",
+              "Title": "IBusHorarioServicio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBusHorario\\IBusHorarioServicio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBusHorario\\IBusHorarioServicio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBusHorario\\IBusHorarioServicio.cs*",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBusHorario\\IBusHorarioServicio.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T22:51:50.088Z",
+              "WhenOpened": "2025-02-21T15:15:51.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IBusServicio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBus\\IBusServicio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBus\\IBusServicio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBus\\IBusServicio.cs*",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IBus\\IBusServicio.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T14:46:59.214Z",
               "EditorCaption": ""
             }
           ]
