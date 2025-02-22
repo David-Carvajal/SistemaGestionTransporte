@@ -1,0 +1,74 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API de EstadoConductor",
+    "description": "API para la gestión de estado de conductores en el sistema de gestion de transporte.",
+    "contact": {
+      "name": "Soporte API",
+      "email": "johandavidsalinascarvajal67@gmail.com"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/EstadoConductor/{id}": {
+      "get": {
+        "tags": [
+          "EstadoConductor"
+        ],
+        "summary": "Consulta un estado de conductor específico por su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Identificador único del estado del conductor a consultar.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoConductorDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoConductorDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoConductorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "EstadoConductorDto": {
+        "type": "object",
+        "properties": {
+          "idEstadoConductor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreEstadoConductor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers.EstadoConductorController",
+    "Method": "Consultar",
+    "RelativePath": "api/EstadoConductor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Dtos.EstadoConductorDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

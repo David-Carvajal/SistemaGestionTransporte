@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mectronics.SistemaGestionTransporte.MS.ConductorHorario</name>
+    </assembly>
+    <members>
+        <member name="F:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController._conductorHorarioServicio">
+            <summary>
+            Servicio para manejar la lógica de negocio de los horarios de los conductores.
+            </summary>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController.#ctor(Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IConductorHorario.IConductorHorarioServicio)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController"/> con el servicio inyectado.
+            </summary>
+            <param name="conductorHorarioServicio">Instancia del servicio de horarios de conductores.</param>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController.Insertar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorHorarioDto)">
+            <summary>
+            Crea un nuevo horario de conductor en el sistema.
+            </summary>
+            <param name="conductorHorarioDto">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorHorarioDto"/> con la información del horario a insertar.</param>
+            <returns>Respuesta con el horario creado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController.Actualizar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorHorarioDto)">
+            <summary>
+            Actualiza un horario de conductor existente en el sistema.
+            </summary>
+            <param name="conductorHorarioDto">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorHorarioDto"/> con la información actualizada.</param>
+            <returns>Respuesta con el horario actualizado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController.Eliminar(System.Int32)">
+            <summary>
+            Elimina un horario de conductor del sistema por su identificador.
+            </summary>
+            <param name="id">Identificador único del horario a eliminar.</param>
+            <returns>Respuesta con el resultado de la eliminación.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController.ConsultarLista(Mectronics.SistemaGestionTransporte.Tranversales.Filtros.ConductorHorarioFiltro)">
+            <summary>
+            Consulta una lista de horarios de conductores basados en los filtros proporcionados.
+            </summary>
+            <param name="filtro">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Filtros.ConductorHorarioFiltro"/> con los criterios de búsqueda.</param>
+            <returns>Lista de horarios de conductores encontrados.</returns>
+        </member>
+    </members>
+</doc>

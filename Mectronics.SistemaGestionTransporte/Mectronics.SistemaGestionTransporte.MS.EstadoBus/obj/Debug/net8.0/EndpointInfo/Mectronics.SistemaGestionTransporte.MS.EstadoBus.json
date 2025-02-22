@@ -1,0 +1,40 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API de EstadoBus",
+    "description": "API para la gestión de Estado de Buses en el sistema de gestion de transporte.",
+    "contact": {
+      "name": "Soporte API",
+      "email": "johandavidsalinascarvajal67@gmail.com"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/EstadoBus/{id}": {
+      "get": {
+        "tags": [
+          "EstadoBus"
+        ],
+        "summary": "Consulta un estado de bus específico por su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Identificador único del estado de bus a consultar.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

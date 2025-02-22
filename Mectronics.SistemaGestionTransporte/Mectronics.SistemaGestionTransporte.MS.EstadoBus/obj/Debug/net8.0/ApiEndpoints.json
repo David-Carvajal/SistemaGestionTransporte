@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers.EstadoBusController",
+    "Method": "Consultar",
+    "RelativePath": "api/EstadoBus/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

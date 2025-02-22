@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mectronics.SistemaGestionTransporte.MS.EstadoConductor</name>
+    </assembly>
+    <members>
+        <member name="T:Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers.EstadoConductorController">
+            <summary>
+            Controlador para gestionar las operaciones relacionadas con el estado de los conductores.
+            </summary>
+        </member>
+        <member name="F:Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers.EstadoConductorController._estadoConductorServicio">
+            <summary>
+            Servicio de estado de conductor para manejar la lógica de negocio.
+            </summary>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers.EstadoConductorController.#ctor(Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IEstadoConductor.IEstadoConductorServicio)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers.EstadoConductorController"/> con el servicio inyectado.
+            </summary>
+            <param name="estadoConductorServicio">Instancia del servicio de estado de conductor.</param>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers.EstadoConductorController.Consultar(System.Int32)">
+            <summary>
+            Consulta un estado de conductor específico por su identificador.
+            </summary>
+            <param name="id">Identificador único del estado del conductor a consultar.</param>
+            <returns>Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.EstadoConductorDto"/> con la información del estado del conductor.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+@Mectronics.SistemaGestionTransporte.MS.Usuario_HostAddress = http://localhost:5195
+
+GET {{Mectronics.SistemaGestionTransporte.MS.Usuario_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

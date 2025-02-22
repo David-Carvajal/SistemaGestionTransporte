@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Mectronics.SistemaGestionTransporte.MS.EstadoBus.props" />
+</Project>

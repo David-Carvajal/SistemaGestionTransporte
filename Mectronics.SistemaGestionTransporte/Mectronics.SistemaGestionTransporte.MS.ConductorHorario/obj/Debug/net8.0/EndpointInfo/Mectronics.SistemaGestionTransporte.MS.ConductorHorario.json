@@ -1,0 +1,377 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API de ConductorHorario",
+    "description": "API para la gestión de horarios de conductores en el sistema de gestion de transporte.",
+    "contact": {
+      "name": "Soporte API",
+      "email": "johandavidsalinascarvajal67@gmail.com"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/ConductorHorario": {
+      "post": {
+        "tags": [
+          "ConductorHorario"
+        ],
+        "summary": "Crea un nuevo horario de conductor en el sistema.",
+        "requestBody": {
+          "description": "Objeto Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorHorarioDto con la información del horario a insertar.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConductorHorarioDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConductorHorarioDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConductorHorarioDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "ConductorHorario"
+        ],
+        "summary": "Actualiza un horario de conductor existente en el sistema.",
+        "requestBody": {
+          "description": "Objeto Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorHorarioDto con la información actualizada.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConductorHorarioDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConductorHorarioDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConductorHorarioDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ConductorHorario"
+        ],
+        "summary": "Consulta una lista de horarios de conductores basados en los filtros proporcionados.",
+        "parameters": [
+          {
+            "name": "IdConductorHorario",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IdConductor",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Fecha",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "DiaSemana",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConductorHorarioDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConductorHorarioDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConductorHorarioDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ConductorHorario/{id}": {
+      "delete": {
+        "tags": [
+          "ConductorHorario"
+        ],
+        "summary": "Elimina un horario de conductor del sistema por su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Identificador único del horario a eliminar.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BusDto": {
+        "type": "object",
+        "properties": {
+          "idBus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "$ref": "#/components/schemas/EstadoBusDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConductorDto": {
+        "type": "object",
+        "properties": {
+          "idConductor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroLicencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEstadoConductor": {
+            "$ref": "#/components/schemas/EstadoConductorDto"
+          },
+          "usuario": {
+            "$ref": "#/components/schemas/UsuarioDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConductorHorarioDto": {
+        "type": "object",
+        "properties": {
+          "idConductorHorario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "conductor": {
+            "$ref": "#/components/schemas/ConductorDto"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "diaSemana": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaEntrada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaSalida": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "bus": {
+            "$ref": "#/components/schemas/BusDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstadoBusDto": {
+        "type": "object",
+        "properties": {
+          "idEstadoBus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstadoConductorDto": {
+        "type": "object",
+        "properties": {
+          "idEstadoConductor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RolDto": {
+        "type": "object",
+        "properties": {
+          "idRol": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreRol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioDto": {
+        "type": "object",
+        "properties": {
+          "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "$ref": "#/components/schemas/RolDto"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

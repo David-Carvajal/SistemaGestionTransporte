@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mectronics.SistemaGestionTransporte.MS.Usuario</name>
+    </assembly>
+    <members>
+        <member name="T:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador">
+            <summary>
+            Controlador para gestionar las operaciones sobre la entidad <see cref="N:Mectronics.SistemaGestionTransporte.MS.Usuario"/>.
+            </summary>
+        </member>
+        <member name="F:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador._usuarioServicio">
+            <summary>
+            Instancia del servicio de usuario para manejar la lógica de negocio.
+            </summary>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador.#ctor(Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IUsuario.IUsuarioServicio)">
+            <summary>
+            Constructor que inicializa el controlador con una instancia del servicio de usuario.
+            </summary>
+            <param name="usuarioServicio">Instancia del servicio de usuario.</param>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador.Consultar(System.Int32)">
+            <summary>
+            Endpoint para obtener un usuario específico basado en su identificador.
+            </summary>
+            <param name="id">Identificador único del usuario.</param>
+            <returns>El usuario encontrado o un mensaje de error si no existe.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador.ConsultarLista(Mectronics.SistemaGestionTransporte.Tranversales.Filtros.UsuarioFiltro)">
+            <summary>
+            Endpoint para obtener una lista de usuarios según un filtro.
+            </summary>
+            <param name="filtro">Objeto con los criterios de búsqueda.</param>
+            <returns>Lista de usuarios encontrados.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador.Insertar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.UsuarioDto)">
+            <summary>
+            Endpoint para insertar un nuevo usuario en la base de datos.
+            </summary>
+            <param name="usuarioDto">Objeto con la información del usuario a insertar.</param>
+            <returns>Usuario creado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador.Actualizar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.UsuarioDto)">
+            <summary>
+            Endpoint para actualizar un usuario existente en la base de datos.
+            </summary>
+            <param name="usuarioDto">Objeto con la información actualizada del usuario.</param>
+            <returns>Usuario actualizado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador.Eliminar(System.Int32)">
+            <summary>
+            Endpoint para eliminar un usuario basado en su identificador.
+            </summary>
+            <param name="id">Identificador único del usuario a eliminar.</param>
+            <returns>Número de filas afectadas o mensaje de error.</returns>
+        </member>
+    </members>
+</doc>
