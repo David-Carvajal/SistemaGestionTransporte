@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Mectronics.SistemaGestionTransporte.MS.Bus.Controllers
 {
     using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
-    [Route("api/[controller]")]
+    [Route("api/Bus")]
     [ApiController]
     public class BusController : ControllerBase
     {
@@ -66,7 +66,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Bus.Controllers
         /// </summary>
         /// <param name="id">Identificador único del bus a eliminar.</param>
         /// <returns>Respuesta con el resultado de la eliminación.</returns>
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public ActionResult<int> Eliminar(int id)
         {
             try
@@ -85,7 +85,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Bus.Controllers
         /// </summary>
         /// <param name="id">Identificador único del bus a consultar.</param>
         /// <returns>Objeto <see cref="BusDto"/> con la información del bus consultado.</returns>
-        [HttpGet("{id}")]
+        [HttpGet]
         public ActionResult<BusDto> Consultar(int id)
         {
             try

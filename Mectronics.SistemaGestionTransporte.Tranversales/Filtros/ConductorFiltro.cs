@@ -9,7 +9,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         /// <summary>
         /// Identificador único del conductor que se desea filtrar.
         /// </summary>
-        public int IdConductores { get; set; }
+        public int IdConductor { get; set; }
 
         /// <summary>
         /// Número de licencia del conductor que se desea filtrar.
@@ -27,7 +27,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         /// </summary>
         public ConductorFiltro()
         {
-            IdConductores = 0;
+            IdConductor = 0;
             NumeroLicencia = string.Empty;
             IdEstadoConductor = 0;
         }

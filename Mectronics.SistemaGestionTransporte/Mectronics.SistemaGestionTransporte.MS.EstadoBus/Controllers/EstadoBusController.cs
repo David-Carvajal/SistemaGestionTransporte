@@ -8,7 +8,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers
     /// <summary>
     /// Controlador API para gestionar los estados de los buses.
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/Estado Bus")]
     [ApiController]
     public class EstadoBusController : ControllerBase
     {
@@ -31,12 +31,12 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers
         /// </summary>
         /// <param name="id">Identificador único del estado de bus a consultar.</param>
         /// <returns>Objeto <see cref="EstadoBusDto"/> con la información del estado de bus consultado.</returns>
-        [HttpGet("{id}")]
+        [HttpGet]
         public ActionResult Consultar(int id)
         {
             try
             {
-                var filtro = new EstadoBusFiltro { IdEstadoBus = id };
+                EstadoBusFiltro filtro = new EstadoBusFiltro { IdEstadoBus = id };
                 EstadoBusDto estadoBusDto = _estadoBusServicio.Consultar(filtro);
 
                 if (estadoBusDto == null)

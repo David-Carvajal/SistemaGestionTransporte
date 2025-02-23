@@ -9,100 +9,108 @@ namespace Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers
     /// Controlador para gestionar las operaciones sobre la entidad <see cref="Usuario"/>.
     /// </summary>
     [ApiController]
-    [Route("api")]
-    public class UsuarioControlador : ControllerBase
+    [Route("api/Usuario")]
+    public class UsuarioController : ControllerBase
     {
         /// <summary>
-        /// Instancia del servicio de usuario para manejar la lógica de negocio.
+        /// Servicio de usuario para manejar la lógica de negocio.
         /// </summary>
         private readonly IUsuarioServicio _usuarioServicio;
 
         /// <summary>
-        /// Constructor que inicializa el controlador con una instancia del servicio de usuario.
+        /// Inicializa una nueva instancia del <see cref="UsuarioController"/> con el servicio inyectado.
         /// </summary>
-        /// <param name="usuarioServicio">Instancia del servicio de usuario.</param>
-        public UsuarioControlador(IUsuarioServicio usuarioServicio)
+        /// <param name="usuarioServicio">Instancia del servicio de horarios de buses.</param>
+        public UsuarioController(IUsuarioServicio usuarioServicio)
         {
             _usuarioServicio = usuarioServicio;
         }
 
         /// <summary>
-        /// Endpoint para obtener un usuario específico basado en su identificador.
+        /// Consulta un usuario específico por su identificador.
         /// </summary>
         /// <param name="id">Identificador único del usuario.</param>
+        /// <returns>Objeto <see cref="UsuarioDto"/> con la información del bus consultado.</returns>
         /// <returns>El usuario encontrado o un mensaje de error si no existe.</returns>
-        [HttpGet("{id}")]
+        [HttpGet]
         public IActionResult Consultar(int id)
         {
             try
             {
-                var usuario = _usuarioServicio.Consultar(new UsuarioFiltro { IdUsuario = id });
-                if (usuario == null)
+                UsuarioFiltro filtro = new UsuarioFiltro { IdUsuario = id };
+                UsuarioDto usuarioDto = _usuarioServicio.Consultar(filtro);
+                if (usuarioDto == null)
                 {
-                    return NotFound("Usuario no encontrado.");
+                    return NotFound(new RespuestaDto { Exito = false, Mensaje = "No se encontro el usuario Solicitado.", Datos = null });
                 }
-                return Ok(usuario);
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Registro consultado correctamente.", Datos = usuarioDto });
             }
             catch (Exception ex)
             {
-                return BadRequest(new { mensaje = ex.Message });
+                return BadRequest(new RespuestaDto { Exito = false, Mensaje = ex.Message, Datos = null });
             }
         }
 
         /// <summary>
-        /// Endpoint para obtener una lista de usuarios según un filtro.
+        /// Consulta una lista de usuarios basados en los filtros proporcionados.
         /// </summary>
-        /// <param name="filtro">Objeto con los criterios de búsqueda.</param>
+        /// <param name="filtro">Objeto <see cref="UsuarioFiltro"/> con los criterios de búsqueda.</param>
         /// <returns>Lista de usuarios encontrados.</returns>
         [HttpGet]
-        public IActionResult ConsultarLista([FromBody] UsuarioFiltro filtro)
+        public ActionResult<List<BusDto>> ConsultarLista([FromQuery] UsuarioFiltro filtro)
         {
             try
             {
-                var usuarios = _usuarioServicio.ConsultarLista(filtro);
-                return Ok(usuarios);
+                List<UsuarioDto> usuarioDto = _usuarioServicio.ConsultarLista(filtro);
+                if (usuarioDto == null || usuarioDto.Count == 0)
+                {
+                    return NotFound(new RespuestaDto { Exito = false, Mensaje = "No se encontro informacion.", Datos = null });
+                }
+
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Registros Consultados exitosamente.", Datos = usuarioDto });
+
             }
             catch (Exception ex)
             {
-                return BadRequest(new { mensaje = ex.Message });
+                return BadRequest(new RespuestaDto { Exito = false, Mensaje = ex.Message, Datos = null });
             }
         }
 
         /// <summary>
-        /// Endpoint para insertar un nuevo usuario en la base de datos.
+        /// Crea un nuevo usuario en el sistema.
         /// </summary>
-        /// <param name="usuarioDto">Objeto con la información del usuario a insertar.</param>
-        /// <returns>Usuario creado.</returns>
+        /// <param name="usuarioDto">Objeto <see cref="UsuarioDto"/> con la información del usuario a insertar.</param>
+        /// <returns>Respuesta con el usuario creado.</returns>
         [HttpPost]
-        public IActionResult Insertar([FromBody] UsuarioDto usuarioDto)
+        public ActionResult<int> Insertar([FromBody] UsuarioDto usuarioDto)
         {
             try
             {
-                var usuarioCreado = _usuarioServicio.Insertar(usuarioDto);
-                return CreatedAtAction(nameof(Consultar), new { id = usuarioCreado.IdUsuario }, usuarioCreado);
+                usuarioDto = _usuarioServicio.Insertar(usuarioDto);
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Usuario creado exotosamente.", Datos = usuarioDto });
             }
             catch (Exception ex)
             {
-                return BadRequest(new { mensaje = ex.Message });
+                return BadRequest(new RespuestaDto{ Exito = false, Mensaje= ex.Message, Datos = null});
             }
         }
 
         /// <summary>
-        /// Endpoint para actualizar un usuario existente en la base de datos.
+        /// Actualiza un usuario existente en la base de datos.
         /// </summary>
-        /// <param name="usuarioDto">Objeto con la información actualizada del usuario.</param>
-        /// <returns>Usuario actualizado.</returns>
+        /// <param name="usuarioDto">Objeto <see cref="UsuarioDto"/>con la información actualizada del usuario.</param>
+        /// <returns>Respuesta Usuario actualizado.</returns>
         [HttpPatch]
-        public IActionResult Actualizar([FromBody] UsuarioDto usuarioDto)
+        public ActionResult<int> Actualizar([FromBody] UsuarioDto usuarioDto)
         {
             try
             {
-                var usuarioActualizado = _usuarioServicio.Actualizar(usuarioDto);
-                return Ok(usuarioActualizado);
+                _usuarioServicio.Actualizar(usuarioDto);
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Usuario actualizado exitosamente.", Datos = usuarioDto });
             }
             catch (Exception ex)
             {
-                return BadRequest(new { mensaje = ex.Message });
+                return BadRequest(new RespuestaDto { Exito= false, Mensaje = ex.Message, Datos = null});
             }
         }
 
@@ -111,21 +119,18 @@ namespace Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers
         /// </summary>
         /// <param name="id">Identificador único del usuario a eliminar.</param>
         /// <returns>Número de filas afectadas o mensaje de error.</returns>
-        [HttpDelete("{id}")]
-        public IActionResult Eliminar(int id)
+        [HttpDelete]
+        public ActionResult<int> Eliminar(int id)
         {
             try
             {
-                var filasAfectadas = _usuarioServicio.Eliminar(id);
-                if (filasAfectadas <= 0)
-                {
-                    return NotFound("Usuario no encontrado o no pudo ser eliminado.");
-                }
-                return Ok("Usuario eliminado correctamente.");
+                int resultado = _usuarioServicio.Eliminar(id);
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Usuario Eliminado Exitosamente.", Datos = resultado });
+
             }
             catch (Exception ex)
             {
-                return BadRequest(new { mensaje = ex.Message });
+                return BadRequest(new RespuestaDto { Exito = false, Mensaje = ex.Message, Datos = null });
             }
         }
     }

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Conductor Horario")]
     [ApiController]
     public class ConductorHorarioController : ControllerBase
     {
@@ -66,7 +66,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers
         /// </summary>
         /// <param name="id">Identificador único del horario a eliminar.</param>
         /// <returns>Respuesta con el resultado de la eliminación.</returns>
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public ActionResult<int> Eliminar(int id)
         {
             try

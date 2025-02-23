@@ -1,14 +1,13 @@
 ﻿using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
 using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IEstadoConductor;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers
 {/// <summary>
  /// Controlador para gestionar las operaciones relacionadas con el estado de los conductores.
  /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/Estado Conductor")]
     [ApiController]
     public class EstadoConductorController : ControllerBase
     {
@@ -31,13 +30,13 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers
         /// </summary>
         /// <param name="id">Identificador único del estado del conductor a consultar.</param>
         /// <returns>Objeto <see cref="EstadoConductorDto"/> con la información del estado del conductor.</returns>
-        [HttpGet("{id}")]
+        [HttpGet]
         public ActionResult<EstadoConductorDto> Consultar(int id)
         {
             try
             {
 
-                var filtro = new EstadoConductorFiltro { IdEstadoConductor = id };
+                EstadoConductorFiltro filtro = new EstadoConductorFiltro { IdEstadoConductor = id };
                 EstadoConductorDto estadoConductorDto = _estadoConductorServicio.Consultar(filtro);
 
                 if (estadoConductorDto == null)

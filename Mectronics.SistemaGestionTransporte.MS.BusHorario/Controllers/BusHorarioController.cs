@@ -1,7 +1,6 @@
 ﻿using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
 using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorario;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers
@@ -11,7 +10,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers
     /// Proporciona operaciones para insertar, actualizar, eliminar y consultar horarios de buses.
     /// </summary>
     [ApiController]
-    [Route("api/bushorario")]
+    [Route("api/Bus horario")]
     public class BusHorarioController : ControllerBase
     {
         /// <summary>
@@ -40,21 +39,11 @@ namespace Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers
             {
                 busHorarioDto = _busHorarioServicio.Insertar(busHorarioDto);
 
-                return Ok(new RespuestaDto
-                {
-                    Exito = true,
-                    Mensaje = "Horario de bus creado exitosamente.",
-                    Datos = busHorarioDto
-                });
+                return Ok(new RespuestaDto{ Exito = true,Mensaje = "Horario de bus creado exitosamente.",Datos = busHorarioDto});
             }
             catch (Exception ex)
             {
-                return BadRequest(new RespuestaDto
-                {
-                    Exito = false,
-                    Mensaje = ex.Message,
-                    Datos = null
-                });
+                return BadRequest(new RespuestaDto{Exito = false,Mensaje = ex.Message,Datos = null });
             }
         }
 
@@ -70,21 +59,11 @@ namespace Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers
             {
                 _busHorarioServicio.Actualizar(busHorarioDto);
 
-                return Ok(new RespuestaDto
-                {
-                    Exito = true,
-                    Mensaje = "Horario de bus modificado exitosamente.",
-                    Datos = busHorarioDto
-                });
+                return Ok(new RespuestaDto{Exito = true,Mensaje = "Horario de bus modificado exitosamente.",Datos = busHorarioDto});
             }
             catch (Exception ex)
             {
-                return BadRequest(new RespuestaDto
-                {
-                    Exito = false,
-                    Mensaje = ex.Message,
-                    Datos = null
-                });
+                return BadRequest(new RespuestaDto{Exito = false, Mensaje = ex.Message,Datos = null});
             }
         }
 
@@ -93,28 +72,19 @@ namespace Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers
         /// </summary>
         /// <param name="id">Identificador único del horario de bus a eliminar.</param>
         /// <returns>Respuesta con el resultado de la eliminación.</returns>
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public ActionResult<int> Eliminar(int id)
         {
             try
             {
                 int resultado = _busHorarioServicio.Eliminar(id);
 
-                return Ok(new RespuestaDto
-                {
-                    Exito = true,
-                    Mensaje = $"Horario de bus eliminado exitosamente. {resultado} registro eliminado.",
-                    Datos = id
-                });
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Horario Eliminado correctamente.", Datos = resultado });
+                
             }
             catch (Exception ex)
             {
-                return BadRequest(new RespuestaDto
-                {
-                    Exito = false,
-                    Mensaje = ex.Message,
-                    Datos = null
-                });
+                return BadRequest(new RespuestaDto{Exito = false,Mensaje = ex.Message,Datos = null});
             }
         }
         /// <summary>
@@ -131,29 +101,14 @@ namespace Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers
 
                 if (busHorariosDto == null || busHorariosDto.Count == 0)
                 {
-                    return NotFound(new RespuestaDto
-                    {
-                        Exito = false,
-                        Mensaje = "No se encontró información.",
-                        Datos = null
-                    });
+                    return NotFound(new RespuestaDto{Exito = false,Mensaje = "No se encontró información.",Datos = null});
                 }
 
-                return Ok(new RespuestaDto
-                {
-                    Exito = true,
-                    Mensaje = "Registros consultados exitosamente.",
-                    Datos = busHorariosDto
-                });
+                return Ok(new RespuestaDto{Exito = true, Mensaje = "Registros consultados exitosamente.", Datos = busHorariosDto});
             }
             catch (Exception ex)
             {
-                return BadRequest(new RespuestaDto
-                {
-                    Exito = false,
-                    Mensaje = ex.Message,
-                    Datos = null
-                });
+                return BadRequest(new RespuestaDto{Exito = false, Mensaje = ex.Message,Datos = null});
             }
         }
     }
