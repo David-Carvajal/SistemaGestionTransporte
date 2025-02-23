@@ -1,24 +1,44 @@
 [
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioController",
     "Method": "ConsultarLista",
-    "RelativePath": "api",
+    "RelativePath": "api/Usuario",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "filtro",
-        "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Filtros.UsuarioFiltro",
-        "IsRequired": true
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Mectronics.SistemaGestionTransporte.Tranversales.Dtos.BusDto, Mectronics.SistemaGestionTransporte.Tranversales, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioController",
     "Method": "Insertar",
-    "RelativePath": "api",
+    "RelativePath": "api/Usuario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -29,12 +49,22 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioController",
     "Method": "Actualizar",
-    "RelativePath": "api",
+    "RelativePath": "api/Usuario",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -45,29 +75,49 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador",
-    "Method": "Consultar",
-    "RelativePath": "api/{id}",
-    "HttpMethod": "GET",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioControlador",
-    "Method": "Eliminar",
-    "RelativePath": "api/{id}",
-    "HttpMethod": "DELETE",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers.UsuarioController",
+    "Method": "Consultar",
+    "RelativePath": "api/Usuario/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [

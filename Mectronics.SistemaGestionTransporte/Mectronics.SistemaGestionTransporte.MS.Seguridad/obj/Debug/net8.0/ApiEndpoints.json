@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Seguridad.Controllers.AutenticacionController",
+    "Method": "Validar",
+    "RelativePath": "api/Autenticacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "autenticacion",
+        "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Dtos.AutenticacionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Dtos.UsuarioDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

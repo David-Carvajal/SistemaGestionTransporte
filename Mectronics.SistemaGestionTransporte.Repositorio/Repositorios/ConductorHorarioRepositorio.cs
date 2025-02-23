@@ -31,13 +31,17 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
             List<ConductorHorario> horarios = new List<ConductorHorario>();
             string consultaSql = "SELECT * FROM ConductorHorario ";
 
+            if (objFiltro.IdConductorHorario != 0)
+            {
+                consultaSql += "WHERE IdBusHorario = @IdBusHorario ";
+            }
             if (objFiltro.Fecha != DateTime.MinValue)
             {
-                consultaSql += " AND Fecha = @Fecha";
+                consultaSql += "AND Fecha = @Fecha ";
             }
             if (!string.IsNullOrEmpty(objFiltro.DiaSemana))
             {
-                consultaSql += " AND DiaSemana = @DiaSemana";
+                consultaSql += "AND DiaSemana = @DiaSemana";
             }
             try
             {

@@ -1,10 +1,14 @@
 ﻿using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBus;
+using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.Bus.Controllers
 {
-    using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
+    /// <summary>
+    /// Controlador para la gestión de buses en la API.
+    /// Proporciona operaciones para insertar, actualizar, eliminar, consultar y consultar listado buses.
+    /// </summary>
     [Route("api/Bus")]
     [ApiController]
     public class BusController : ControllerBase
@@ -85,7 +89,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Bus.Controllers
         /// </summary>
         /// <param name="id">Identificador único del bus a consultar.</param>
         /// <returns>Objeto <see cref="BusDto"/> con la información del bus consultado.</returns>
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult<BusDto> Consultar(int id)
         {
             try

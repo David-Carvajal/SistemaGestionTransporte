@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers
 {
-
     /// <summary>
-    /// Controlador para la gestión de conductores.
+    /// Controlador para la gestión de Conductores en la API.
+    /// Proporciona operaciones para insertar, actualizar, eliminar, consultar y consultar listado conductores.
     /// </summary>
     [ApiController]
     [Route("api/Conductor")]
@@ -89,7 +89,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers
         /// </summary>
         /// <param name="id">Identificador único del conductor a consultar.</param>
         /// <returns>Objeto <see cref="ConductorDto"/> con la información del conductor consultado.</returns>
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult<ConductorDto> Consultar(int id)
         {
             try

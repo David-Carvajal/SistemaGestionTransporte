@@ -4,9 +4,11 @@ using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IEstadoConduct
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers
-{/// <summary>
- /// Controlador para gestionar las operaciones relacionadas con el estado de los conductores.
- /// </summary>
+{
+    /// <summary>
+    /// Controlador para la gestión de estado conductores en la API.
+    /// Proporciona operaciones de consultar estado de conductores.
+    /// </summary>
     [Route("api/Estado Conductor")]
     [ApiController]
     public class EstadoConductorController : ControllerBase
@@ -30,7 +32,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers
         /// </summary>
         /// <param name="id">Identificador único del estado del conductor a consultar.</param>
         /// <returns>Objeto <see cref="EstadoConductorDto"/> con la información del estado del conductor.</returns>
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult<EstadoConductorDto> Consultar(int id)
         {
             try

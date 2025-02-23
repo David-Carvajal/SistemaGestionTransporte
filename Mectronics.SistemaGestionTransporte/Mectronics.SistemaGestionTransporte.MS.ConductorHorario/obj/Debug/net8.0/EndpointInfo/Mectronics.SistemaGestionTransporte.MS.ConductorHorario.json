@@ -10,7 +10,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/ConductorHorario": {
+    "/api/Conductor Horario": {
       "post": {
         "tags": [
           "ConductorHorario"
@@ -113,6 +113,48 @@
           }
         }
       },
+      "delete": {
+        "tags": [
+          "ConductorHorario"
+        ],
+        "summary": "Elimina un horario de conductor del sistema por su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Identificador único del horario a eliminar.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
       "get": {
         "tags": [
           "ConductorHorario"
@@ -121,14 +163,6 @@
         "parameters": [
           {
             "name": "IdConductorHorario",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "IdConductor",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -183,51 +217,6 @@
           }
         }
       }
-    },
-    "/api/ConductorHorario/{id}": {
-      "delete": {
-        "tags": [
-          "ConductorHorario"
-        ],
-        "summary": "Elimina un horario de conductor del sistema por su identificador.",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Identificador único del horario a eliminar.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -251,7 +240,7 @@
             "type": "string",
             "nullable": true
           },
-          "estado": {
+          "estadoBus": {
             "$ref": "#/components/schemas/EstadoBusDto"
           }
         },
@@ -330,7 +319,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "estado": {
+          "nombreEstadoConductor": {
             "type": "string",
             "nullable": true
           }
@@ -363,6 +352,10 @@
             "nullable": true
           },
           "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contrasena": {
             "type": "string",
             "nullable": true
           },

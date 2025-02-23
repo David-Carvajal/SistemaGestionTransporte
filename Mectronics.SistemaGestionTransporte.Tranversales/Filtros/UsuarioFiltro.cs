@@ -17,6 +17,11 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public string Nombre { get; set; }
 
         /// <summary>
+        /// Correo del usuario que se desea filtrar.
+        /// </summary>
+        public string Correo { get; set; }
+
+        /// <summary>
         /// Identificador único del rol asociado al usuario.
         /// </summary>
         public int IdRol { get; set; }

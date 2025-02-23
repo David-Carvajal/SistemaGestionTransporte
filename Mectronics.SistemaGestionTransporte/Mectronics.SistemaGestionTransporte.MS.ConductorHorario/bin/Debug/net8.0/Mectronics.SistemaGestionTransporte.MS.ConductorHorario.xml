@@ -4,6 +4,12 @@
         <name>Mectronics.SistemaGestionTransporte.MS.ConductorHorario</name>
     </assembly>
     <members>
+        <member name="T:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController">
+            <summary>
+            Controlador para la gestión de Horarios de conductores en la API.
+            Proporciona operaciones para insertar, actualizar, eliminar y consultar listado de horarios de conductores.
+            </summary>
+        </member>
         <member name="F:Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController._conductorHorarioServicio">
             <summary>
             Servicio para manejar la lógica de negocio de los horarios de los conductores.

@@ -53,6 +53,32 @@
   },
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Bus.Controllers.BusController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Bus",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Bus.Controllers.BusController",
     "Method": "ConsultarLista",
     "RelativePath": "api/Bus",
     "HttpMethod": "GET",
@@ -83,32 +109,6 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Mectronics.SistemaGestionTransporte.Tranversales.Dtos.BusDto, Mectronics.SistemaGestionTransporte.Tranversales, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Bus.Controllers.BusController",
-    "Method": "Eliminar",
-    "RelativePath": "api/Bus/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
         "MediaTypes": [
           "text/plain",
           "application/json",

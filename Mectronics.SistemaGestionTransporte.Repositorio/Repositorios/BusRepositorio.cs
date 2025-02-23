@@ -146,7 +146,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El identificador del bus recién insertado.</returns>        
         public int Insertar(Bus bus)
         {
-            string strComandoSql = @"INSERT INTO Bus (Modelo, Capacidad, Placa, IdEstadoBus) 
+            string strComandoSql = @"INSERT INTO Buses (Modelo, Capacidad, Placa, IdEstadoBus) 
                                      VALUES (@Modelo, @Capacidad, @Placa, @IdEstadoBus)
                                      SELECT SCOPE_IDENTITY();";
             int idBus = 0;

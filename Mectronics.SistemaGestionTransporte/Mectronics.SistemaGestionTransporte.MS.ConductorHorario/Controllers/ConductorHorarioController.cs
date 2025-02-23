@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers
 {
+    /// <summary>
+    /// Controlador para la gestión de Horarios de conductores en la API.
+    /// Proporciona operaciones para insertar, actualizar, eliminar y consultar listado de horarios de conductores.
+    /// </summary>
     [Route("api/Conductor Horario")]
     [ApiController]
     public class ConductorHorarioController : ControllerBase

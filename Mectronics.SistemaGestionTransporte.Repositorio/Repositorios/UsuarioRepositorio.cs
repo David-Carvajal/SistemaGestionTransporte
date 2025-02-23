@@ -65,18 +65,25 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<Usuario> ConsultarListado(UsuarioFiltro filtro)
         {
             List<Usuario> usuarios = new List<Usuario>();
-            string consultaSql = "SELECT u.IdUsuario, u.Nombre, u.Correo, u.Contraseña, u.IdRol, r.NombreRol " +
-                "FROM Usuario u INNER JOIN Rol r ON u.IdRol = r.IdRol " +
+            string consultaSql = "SELECT u.IdUsuario, u.Nombre, u.Correo, u.Contrasena, u.IdRol, r.NombreRol " +
+                "FROM Usuarios u INNER JOIN Roles r ON u.IdRol = r.IdRol " +
                 "WHERE u.Nombre LIKE @Nombre";
+
+            if (!string.IsNullOrWhiteSpace(filtro.Correo))
+            {
+                consultaSql += " AND u.correo = @Correo";
+            }
+
             if (filtro.IdRol > 0)
             {
-                consultaSql += "AND u.IdRol = @IdRol";
+                consultaSql += " AND u.IdRol = @IdRol";
             }
 
             try
             {
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@Nombre", $"%{filtro.Nombre}%", SqlDbType.VarChar);
+                _conexion.AgregarParametroSql("@Correo", filtro.Correo, SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@IdRol", filtro.IdRol, SqlDbType.Int);
 
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))

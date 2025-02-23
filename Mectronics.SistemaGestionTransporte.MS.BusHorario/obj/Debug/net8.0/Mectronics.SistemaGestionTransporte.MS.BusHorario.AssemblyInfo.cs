@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mectronics.SistemaGestionTransporte.MS.BusHorario")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eeb3f7e508a379b6c4025e5636178687967f66f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e810c5bdb03e87e8a074af530343c7bb9e44cd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mectronics.SistemaGestionTransporte.MS.BusHorario")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mectronics.SistemaGestionTransporte.MS.BusHorario")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

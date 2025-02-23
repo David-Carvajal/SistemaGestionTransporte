@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorController",
     "Method": "Insertar",
-    "RelativePath": "api/ConductorControlador",
+    "RelativePath": "api/Conductor",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -13,12 +13,22 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorController",
     "Method": "Actualizar",
-    "RelativePath": "api/ConductorControlador",
+    "RelativePath": "api/Conductor",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -29,18 +39,54 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Conductor",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorController",
     "Method": "ConsultarLista",
-    "RelativePath": "api/ConductorControlador",
+    "RelativePath": "api/Conductor",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "IdConductores",
+        "Name": "IdConductor",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -55,28 +101,22 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
-    "Method": "Eliminar",
-    "RelativePath": "api/ConductorControlador/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+    "ReturnTypes": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Type": "System.Collections.Generic.List\u00601[[Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto, Mectronics.SistemaGestionTransporte.Tranversales, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorController",
     "Method": "Consultar",
-    "RelativePath": "api/ConductorControlador/{id}",
+    "RelativePath": "api/Conductor/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -87,6 +127,16 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

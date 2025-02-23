@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mectronics.SistemaGestionTransporte.MS.Rol.Controllers
 {
+    /// <summary>
+    /// Controlador para la gestión de roles en la API.
+    /// Proporciona operaciones de consultar roles
+    /// </summary>
     [Route("api/Rol")]
     [ApiController]
     public class RolController : ControllerBase
@@ -28,7 +32,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Rol.Controllers
         /// </summary>
         /// <param name="id">Identificador único del rol a consultar.</param>
         /// <returns>Objeto <see cref="RolDto"/> con la información del rol consultado.</returns>
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult<RolDto> Consultar(int id)
         {
             try

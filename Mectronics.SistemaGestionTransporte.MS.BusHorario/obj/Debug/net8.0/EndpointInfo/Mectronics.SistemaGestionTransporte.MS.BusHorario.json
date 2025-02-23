@@ -10,7 +10,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/bushorario": {
+    "/api/Bus horario": {
       "post": {
         "tags": [
           "BusHorario"
@@ -113,6 +113,48 @@
           }
         }
       },
+      "delete": {
+        "tags": [
+          "BusHorario"
+        ],
+        "summary": "Elimina un horario de bus del sistema por su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Identificador único del horario de bus a eliminar.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
       "get": {
         "tags": [
           "BusHorario"
@@ -175,51 +217,6 @@
           }
         }
       }
-    },
-    "/api/bushorario/{id}": {
-      "delete": {
-        "tags": [
-          "BusHorario"
-        ],
-        "summary": "Elimina un horario de bus del sistema por su identificador.",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Identificador único del horario de bus a eliminar.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -243,7 +240,7 @@
             "type": "string",
             "nullable": true
           },
-          "estado": {
+          "estadoBus": {
             "$ref": "#/components/schemas/EstadoBusDto"
           }
         },

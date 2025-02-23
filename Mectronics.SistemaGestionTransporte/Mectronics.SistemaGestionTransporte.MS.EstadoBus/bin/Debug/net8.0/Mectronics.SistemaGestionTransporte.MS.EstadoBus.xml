@@ -6,7 +6,8 @@
     <members>
         <member name="T:Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers.EstadoBusController">
             <summary>
-            Controlador API para gestionar los estados de los buses.
+            Controlador para la gestión de estado buses en la API.
+            Proporciona operaciones de consultar estado de buses.
             </summary>
         </member>
         <member name="F:Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers.EstadoBusController._estadoBusServicio">

@@ -1,7 +1,49 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{83248D2F-AA7C-4280-8E2A-DDF6B382D364}|..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.repositorio\\repositorios\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA57A3C-BB31-4350-A75D-F1A61E01903C}|Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte\\mectronics.sistemagestiontransporte.ms.seguridad\\controllers\\autenticacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA57A3C-BB31-4350-A75D-F1A61E01903C}|Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj|solutionrelative:mectronics.sistemagestiontransporte.ms.seguridad\\controllers\\autenticacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA57A3C-BB31-4350-A75D-F1A61E01903C}|Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte\\mectronics.sistemagestiontransporte.ms.seguridad\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FDA57A3C-BB31-4350-A75D-F1A61E01903C}|Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj|solutionrelative:mectronics.sistemagestiontransporte.ms.seguridad\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD626D67-C2B9-4230-89CB-202A9BBB91DB}|Mectronics.SistemaGestionTransporte.MS.Usuario\\Mectronics.SistemaGestionTransporte.MS.Usuario.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte\\mectronics.sistemagestiontransporte.ms.usuario\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD626D67-C2B9-4230-89CB-202A9BBB91DB}|Mectronics.SistemaGestionTransporte.MS.Usuario\\Mectronics.SistemaGestionTransporte.MS.Usuario.csproj|solutionrelative:mectronics.sistemagestiontransporte.ms.usuario\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA57A3C-BB31-4350-A75D-F1A61E01903C}|Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte\\mectronics.sistemagestiontransporte.ms.seguridad\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA57A3C-BB31-4350-A75D-F1A61E01903C}|Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj|solutionrelative:mectronics.sistemagestiontransporte.ms.seguridad\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1BE645F-20E0-4B71-8A0B-5E40B3A8E4B9}|..\\Mectronics.SistemaGestionTransporte.Servicio\\Mectronics.SistemaGestionTransporte.Servicio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.servicio\\servicios\\seguridadservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\interfaces\\iseguridad\\iseguridadservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\dtos\\autenticaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD626D67-C2B9-4230-89CB-202A9BBB91DB}|Mectronics.SistemaGestionTransporte.MS.Usuario\\Mectronics.SistemaGestionTransporte.MS.Usuario.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte\\mectronics.sistemagestiontransporte.ms.usuario\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD626D67-C2B9-4230-89CB-202A9BBB91DB}|Mectronics.SistemaGestionTransporte.MS.Usuario\\Mectronics.SistemaGestionTransporte.MS.Usuario.csproj|solutionrelative:mectronics.sistemagestiontransporte.ms.usuario\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1BE645F-20E0-4B71-8A0B-5E40B3A8E4B9}|..\\Mectronics.SistemaGestionTransporte.Servicio\\Mectronics.SistemaGestionTransporte.Servicio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.servicio\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\interfaces\\iusuario\\iusuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\filtros\\usuariofiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,11 +51,167 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Usuario\\appsettings.json",
+              "RelativeDocumentMoniker": "Mectronics.SistemaGestionTransporte.MS.Usuario\\appsettings.json",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Usuario\\appsettings.json",
+              "RelativeToolTip": "Mectronics.SistemaGestionTransporte.MS.Usuario\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-23T19:28:54.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Seguridad\\appsettings.json",
+              "RelativeDocumentMoniker": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\appsettings.json",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Seguridad\\appsettings.json",
+              "RelativeToolTip": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-23T19:28:40.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Seguridad\\Program.cs",
+              "RelativeDocumentMoniker": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\Program.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Seguridad\\Program.cs",
+              "RelativeToolTip": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:26:05.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AutenticacionDto.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\AutenticacionDto.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\AutenticacionDto.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\AutenticacionDto.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\AutenticacionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:23:22.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Usuario\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Mectronics.SistemaGestionTransporte.MS.Usuario\\Controllers\\UsuarioController.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Usuario\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Mectronics.SistemaGestionTransporte.MS.Usuario\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFoAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:15:57.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AutenticacionController.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Seguridad\\Controllers\\AutenticacionController.cs",
+              "RelativeDocumentMoniker": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\Controllers\\AutenticacionController.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\Mectronics.SistemaGestionTransporte.MS.Seguridad\\Controllers\\AutenticacionController.cs",
+              "RelativeToolTip": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\Controllers\\AutenticacionController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:15:50.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsuarioServicio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAUwJcAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:03:52.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SeguridadServicio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\SeguridadServicio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\SeguridadServicio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\SeguridadServicio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\SeguridadServicio.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:02:47.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISeguridadServicio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\ISeguridad\\ISeguridadServicio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\ISeguridad\\ISeguridadServicio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\ISeguridad\\ISeguridadServicio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\ISeguridad\\ISeguridadServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:01:40.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUsuarioRepositorio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IUsuario\\IUsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IUsuario\\IUsuarioRepositorio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IUsuario\\IUsuarioRepositorio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Interfaces\\IUsuario\\IUsuarioRepositorio.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAvwDMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:00:04.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsuarioFiltro.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\UsuarioFiltro.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\UsuarioFiltro.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\UsuarioFiltro.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\UsuarioFiltro.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T18:56:11.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioRepositorio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAvwEgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T18:55:45.495Z",
+              "EditorCaption": ""
             }
           ]
         }

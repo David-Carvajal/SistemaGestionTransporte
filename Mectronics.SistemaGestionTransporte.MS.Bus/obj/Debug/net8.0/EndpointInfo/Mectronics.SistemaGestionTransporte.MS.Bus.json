@@ -113,6 +113,48 @@
           }
         }
       },
+      "delete": {
+        "tags": [
+          "Bus"
+        ],
+        "summary": "Elimina un bus del sistema por su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Identificador único del bus a eliminar.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
       "get": {
         "tags": [
           "Bus"
@@ -185,49 +227,6 @@
       }
     },
     "/api/Bus/{id}": {
-      "delete": {
-        "tags": [
-          "Bus"
-        ],
-        "summary": "Elimina un bus del sistema por su identificador.",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Identificador único del bus a eliminar.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        }
-      },
       "get": {
         "tags": [
           "Bus"
@@ -291,7 +290,7 @@
             "type": "string",
             "nullable": true
           },
-          "estado": {
+          "estadoBus": {
             "$ref": "#/components/schemas/EstadoBusDto"
           }
         },

@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mectronics.SistemaGestionTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mectronics.SistemaGestionTransporte.MS.Usuario", "Mectronics.SistemaGestionTransporte.MS.Usuario\Mectronics.SistemaGestionTransporte.MS.Usuario.csproj", "{BD626D67-C2B9-4230-89CB-202A9BBB91DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mectronics.SistemaGestionTransporte.MS.Seguridad", "Mectronics.SistemaGestionTransporte.MS.Seguridad\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj", "{FDA57A3C-BB31-4350-A75D-F1A61E01903C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{BD626D67-C2B9-4230-89CB-202A9BBB91DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD626D67-C2B9-4230-89CB-202A9BBB91DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD626D67-C2B9-4230-89CB-202A9BBB91DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA57A3C-BB31-4350-A75D-F1A61E01903C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA57A3C-BB31-4350-A75D-F1A61E01903C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA57A3C-BB31-4350-A75D-F1A61E01903C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA57A3C-BB31-4350-A75D-F1A61E01903C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{EE79B7EE-7739-4BE4-A1F7-72E2284CCCAE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5A59D36D-C45B-4CDF-B6D1-24FC15CD735C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{BD626D67-C2B9-4230-89CB-202A9BBB91DB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{FDA57A3C-BB31-4350-A75D-F1A61E01903C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEA95908-34EB-46DE-A714-7EA38DA146F8}

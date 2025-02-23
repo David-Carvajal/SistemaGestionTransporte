@@ -12,11 +12,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public int IdConductorHorario { get; set; }
 
         /// <summary>
-        /// Identificador único del conductor asociado al horario.
-        /// </summary>
-        public int IdConductor { get; set; }
-
-        /// <summary>
         /// Fecha específica del horario que se desea filtrar.
         /// </summary>
         public DateTime Fecha { get; set; }
@@ -33,7 +28,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public ConductorHorarioFiltro()
         {
             IdConductorHorario = 0;
-            IdConductor = 0;
             Fecha = DateTime.MinValue;
             DiaSemana = string.Empty;
         }

@@ -39,7 +39,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
             try
             {
                 _conexion.LimpiarParametros();
-                _conexion.AgregarParametroSql("@IdConductor", objFiltro.IdConductores, SqlDbType.Int);
+                _conexion.AgregarParametroSql("@IdConductor", objFiltro.IdConductor, SqlDbType.Int);
 
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
                 {
@@ -75,9 +75,9 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 consultaSql += " AND IdEstadoConductor = @IdEstadoConductor";
             }
 
-            if (objFiltro.IdConductores > 0)
+            if (objFiltro.IdConductor > 0)
             {
-                consultaSql += "AND IdConductor = @IdConductor";
+                consultaSql += " AND IdConductor = @IdConductor";
             }
 
             try
@@ -85,7 +85,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@NumeroLicencia", $"%{objFiltro.NumeroLicencia}%", SqlDbType.NVarChar);
                 _conexion.AgregarParametroSql("@IdEstadoConductor", objFiltro.IdEstadoConductor, SqlDbType.Int);
-                _conexion.AgregarParametroSql("@IdConductor", objFiltro.IdConductores, SqlDbType.Int);
+                _conexion.AgregarParametroSql("@IdConductor", objFiltro.IdConductor, SqlDbType.Int);
 
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
                 {
@@ -139,7 +139,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El identificador único del conductor insertado.</returns>
         public int Insertar(Conductor conductor)
         {
-            string strComandoSql = "INSERT INTO Conductor (NumeroLicencia, IdEstadoConductor, IdUsuario) VALUES (@NumeroLicencia, @IdEstadoConductor, @IdUsuario); SELECT SCOPE_IDENTITY();";
+            string strComandoSql = "INSERT INTO Conductores (NumeroLicencia, IdEstadoConductor, IdUsuario) VALUES (@NumeroLicencia, @IdEstadoConductor, @IdUsuario); SELECT SCOPE_IDENTITY();";
             int idConductor = 0;
 
             try
@@ -171,7 +171,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El número de filas afectadas en la base de datos.</returns>
         public int Actualizar(Conductor conductor)
         {
-            string strComandoSql = "UPDATE Conductor SET NumeroLicencia = @NumeroLicencia, IdEstadoConductor = @IdEstadoConductor, IdUsuario = @IdUsuario WHERE IdConductor = @IdConductor";
+            string strComandoSql = "UPDATE Conductores SET NumeroLicencia = @NumeroLicencia, IdEstadoConductor = @IdEstadoConductor, IdUsuario = @IdUsuario WHERE IdConductor = @IdConductor";
             int filasAfectadas = 0;
 
             try

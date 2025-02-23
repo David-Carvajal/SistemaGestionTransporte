@@ -10,7 +10,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/EstadoBus/{id}": {
+    "/api/Estado Bus": {
       "get": {
         "tags": [
           "EstadoBus"
@@ -19,9 +19,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "path",
+            "in": "query",
             "description": "Identificador único del estado de bus a consultar.",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"

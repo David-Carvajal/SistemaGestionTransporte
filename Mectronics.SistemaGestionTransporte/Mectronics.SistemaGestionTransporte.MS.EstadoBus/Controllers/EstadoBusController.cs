@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers
 {
     /// <summary>
-    /// Controlador API para gestionar los estados de los buses.
+    /// Controlador para la gestión de estado buses en la API.
+    /// Proporciona operaciones de consultar estado de buses.
     /// </summary>
     [Route("api/Estado Bus")]
     [ApiController]
@@ -31,7 +32,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers
         /// </summary>
         /// <param name="id">Identificador único del estado de bus a consultar.</param>
         /// <returns>Objeto <see cref="EstadoBusDto"/> con la información del estado de bus consultado.</returns>
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult Consultar(int id)
         {
             try

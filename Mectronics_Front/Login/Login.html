@@ -11,7 +11,7 @@
         <!-- Formulario de Iniciar Sesión -->
         <div class="form-container" id="login-form">
             <h2>Iniciar Sesión</h2>
-            <form>
+            <form id="formularioAutenticacion">
                 <div class="input-group">
                     <label for="login-email">Correo:</label>
                     <input type="email" id="login-email" required>
@@ -20,7 +20,7 @@
                     <label for="login-password">Contraseña:</label>
                     <input type="password" id="login-password" required>
                 </div>
-                <button type="submit">Iniciar Sesión</button>
+                <button type="submit" >Iniciar Sesión</button>
             </form>
             <p>¿No tienes una cuenta? <a href="#" id="switch-to-register">Regístrate</a></p>
         </div>
@@ -69,4 +69,7 @@
         });
     </script>
 </body>
+<script src="../Scripts/Login.js"></script>  
+<script src="../Scripts/Encriptar.js"></script>  
+
 </html>

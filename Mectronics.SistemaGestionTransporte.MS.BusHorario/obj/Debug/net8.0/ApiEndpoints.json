@@ -2,7 +2,7 @@
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController",
     "Method": "Insertar",
-    "RelativePath": "api/bushorario",
+    "RelativePath": "api/Bus horario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController",
     "Method": "Actualizar",
-    "RelativePath": "api/bushorario",
+    "RelativePath": "api/Bus horario",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -53,8 +53,34 @@
   },
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Bus horario",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController",
     "Method": "ConsultarLista",
-    "RelativePath": "api/bushorario",
+    "RelativePath": "api/Bus horario",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -78,32 +104,6 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Mectronics.SistemaGestionTransporte.Tranversales.Dtos.BusHorarioDto, Mectronics.SistemaGestionTransporte.Tranversales, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController",
-    "Method": "Eliminar",
-    "RelativePath": "api/bushorario/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
         "MediaTypes": [
           "text/plain",
           "application/json",

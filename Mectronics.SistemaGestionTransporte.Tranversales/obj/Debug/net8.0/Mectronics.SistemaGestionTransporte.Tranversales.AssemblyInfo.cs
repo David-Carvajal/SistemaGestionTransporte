@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mectronics.SistemaGestionTransporte.Tranversales")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+061d858a3ac9290db8c41dc52d463a7e078022c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e810c5bdb03e87e8a074af530343c7bb9e44cd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mectronics.SistemaGestionTransporte.Tranversales")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mectronics.SistemaGestionTransporte.Tranversales")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

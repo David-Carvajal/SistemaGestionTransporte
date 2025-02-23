@@ -2,7 +2,7 @@
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController",
     "Method": "Insertar",
-    "RelativePath": "api/ConductorHorario",
+    "RelativePath": "api/Conductor Horario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController",
     "Method": "Actualizar",
-    "RelativePath": "api/ConductorHorario",
+    "RelativePath": "api/Conductor Horario",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -53,19 +53,40 @@
   },
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Conductor Horario",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController",
     "Method": "ConsultarLista",
-    "RelativePath": "api/ConductorHorario",
+    "RelativePath": "api/Conductor Horario",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "IdConductorHorario",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "IdConductor",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -83,32 +104,6 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorHorarioDto, Mectronics.SistemaGestionTransporte.Tranversales, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers.ConductorHorarioController",
-    "Method": "Eliminar",
-    "RelativePath": "api/ConductorHorario/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
         "MediaTypes": [
           "text/plain",
           "application/json",

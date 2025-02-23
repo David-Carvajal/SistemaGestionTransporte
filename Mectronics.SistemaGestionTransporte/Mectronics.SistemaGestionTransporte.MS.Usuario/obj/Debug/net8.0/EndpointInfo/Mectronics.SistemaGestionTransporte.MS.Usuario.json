@@ -10,12 +10,12 @@
     "version": "v1"
   },
   "paths": {
-    "/api/{id}": {
+    "/api/Usuario/{id}": {
       "get": {
         "tags": [
-          "UsuarioControlador"
+          "Usuario"
         ],
-        "summary": "Endpoint para obtener un usuario específico basado en su identificador.",
+        "summary": "Consulta un usuario específico por su identificador.",
         "parameters": [
           {
             "name": "id",
@@ -33,18 +33,33 @@
             "description": "OK"
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/api/Usuario": {
+      "get": {
         "tags": [
-          "UsuarioControlador"
+          "Usuario"
         ],
-        "summary": "Endpoint para eliminar un usuario basado en su identificador.",
+        "summary": "Consulta una lista de usuarios basados en los filtros proporcionados.",
         "parameters": [
           {
-            "name": "id",
-            "in": "path",
-            "description": "Identificador único del usuario a eliminar.",
-            "required": true,
+            "name": "IdUsuario",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -53,50 +68,43 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api": {
-      "get": {
-        "tags": [
-          "UsuarioControlador"
-        ],
-        "summary": "Endpoint para obtener una lista de usuarios según un filtro.",
-        "requestBody": {
-          "description": "Objeto con los criterios de búsqueda.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UsuarioFiltro"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UsuarioFiltro"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UsuarioFiltro"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BusDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BusDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BusDto"
+                  }
+                }
               }
             }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
           }
         }
       },
       "post": {
         "tags": [
-          "UsuarioControlador"
+          "Usuario"
         ],
-        "summary": "Endpoint para insertar un nuevo usuario en la base de datos.",
+        "summary": "Crea un nuevo usuario en el sistema.",
         "requestBody": {
-          "description": "Objeto con la información del usuario a insertar.",
+          "description": "Objeto Mectronics.SistemaGestionTransporte.Tranversales.Dtos.UsuarioDto con la información del usuario a insertar.",
           "content": {
             "application/json": {
               "schema": {
@@ -117,17 +125,37 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
           }
         }
       },
       "patch": {
         "tags": [
-          "UsuarioControlador"
+          "Usuario"
         ],
-        "summary": "Endpoint para actualizar un usuario existente en la base de datos.",
+        "summary": "Actualiza un usuario existente en la base de datos.",
         "requestBody": {
-          "description": "Objeto con la información actualizada del usuario.",
+          "description": "Objeto Mectronics.SistemaGestionTransporte.Tranversales.Dtos.UsuarioDtocon la información actualizada del usuario.",
           "content": {
             "application/json": {
               "schema": {
@@ -148,7 +176,69 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Eliminar un usuario basado en su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Identificador único del usuario a eliminar.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
           }
         }
       }
@@ -156,6 +246,45 @@
   },
   "components": {
     "schemas": {
+      "BusDto": {
+        "type": "object",
+        "properties": {
+          "idBus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "$ref": "#/components/schemas/EstadoBusDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstadoBusDto": {
+        "type": "object",
+        "properties": {
+          "idEstadoBus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "RolDto": {
         "type": "object",
         "properties": {
@@ -191,24 +320,6 @@
           },
           "rol": {
             "$ref": "#/components/schemas/RolDto"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UsuarioFiltro": {
-        "type": "object",
-        "properties": {
-          "idUsuario": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "idRol": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

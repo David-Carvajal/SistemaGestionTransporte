@@ -10,14 +10,14 @@
     "version": "v1"
   },
   "paths": {
-    "/api/ConductorControlador": {
+    "/api/Conductor": {
       "post": {
         "tags": [
-          "ConductorControlador"
+          "Conductor"
         ],
-        "summary": "Inserta un nuevo conductor en la base de datos.",
+        "summary": "Crea un nuevo conductor en el sistema.",
         "requestBody": {
-          "description": "Objeto Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto con la información a insertar.",
+          "description": "Objeto Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto con la información del conductor a insertar.",
           "content": {
             "application/json": {
               "schema": {
@@ -38,15 +38,35 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
           }
         }
       },
       "patch": {
         "tags": [
-          "ConductorControlador"
+          "Conductor"
         ],
-        "summary": "Actualiza un conductor existente en la base de datos.",
+        "summary": "Actualiza un conductor existente en el sistema.",
         "requestBody": {
           "description": "Objeto Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto con la información actualizada.",
           "content": {
@@ -69,18 +89,80 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Conductor"
+        ],
+        "summary": "Elimina un conductor del sistema por su identificador.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Identificador único del conductor a eliminar.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
           }
         }
       },
       "get": {
         "tags": [
-          "ConductorControlador"
+          "Conductor"
         ],
-        "summary": "Consulta una lista de conductores según los filtros proporcionados.",
+        "summary": "Consulta una lista de conductores basados en los filtros proporcionados.",
         "parameters": [
           {
-            "name": "IdConductores",
+            "name": "IdConductor",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -105,45 +187,48 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConductorDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConductorDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConductorDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/ConductorControlador/{id}": {
-      "delete": {
-        "tags": [
-          "ConductorControlador"
-        ],
-        "summary": "Elimina un conductor por su identificador.",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Identificador único del conductor a eliminar.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Conductor/{id}": {
       "get": {
         "tags": [
-          "ConductorControlador"
+          "Conductor"
         ],
-        "summary": "Consulta un conductor basado en los filtros proporcionados.",
+        "summary": "Consulta un conductor específico por su identificador.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Identificador único del conductor.",
+            "description": "Identificador único del conductor a consultar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -153,7 +238,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConductorDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConductorDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConductorDto"
+                }
+              }
+            }
           }
         }
       }
@@ -188,7 +290,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "estado": {
+          "nombreEstadoConductor": {
             "type": "string",
             "nullable": true
           }
@@ -221,6 +323,10 @@
             "nullable": true
           },
           "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contrasena": {
             "type": "string",
             "nullable": true
           },

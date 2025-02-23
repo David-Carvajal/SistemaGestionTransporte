@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers
 {
     /// <summary>
-    /// Controlador para gestionar las operaciones sobre la entidad <see cref="Usuario"/>.
+    /// Controlador para la gestión de usuarios en la API.
+    /// Proporciona operaciones para insertar, actualizar, eliminar y consultar listado de usuarios.
     /// </summary>
     [ApiController]
     [Route("api/Usuario")]
@@ -32,7 +33,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers
         /// <param name="id">Identificador único del usuario.</param>
         /// <returns>Objeto <see cref="UsuarioDto"/> con la información del bus consultado.</returns>
         /// <returns>El usuario encontrado o un mensaje de error si no existe.</returns>
-        [HttpGet]
+        [HttpGet("{id}")]
         public IActionResult Consultar(int id)
         {
             try
@@ -115,7 +116,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Usuario.Controllers
         }
 
         /// <summary>
-        /// Endpoint para eliminar un usuario basado en su identificador.
+        /// Eliminar un usuario basado en su identificador.
         /// </summary>
         /// <param name="id">Identificador único del usuario a eliminar.</param>
         /// <returns>Número de filas afectadas o mensaje de error.</returns>
