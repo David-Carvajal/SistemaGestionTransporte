@@ -11,12 +11,12 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// <summary>
         /// Descripción del estado del conductor.
         /// </summary>
-        public string Estado { get; set; }
+        public string NombreEstadoConductor { get; set; }
 
         public EstadoConductor()
         {
             IdEstadoConductor = 0;
-            Estado = string.Empty;
+            NombreEstadoConductor = string.Empty;
         }
     }
 }

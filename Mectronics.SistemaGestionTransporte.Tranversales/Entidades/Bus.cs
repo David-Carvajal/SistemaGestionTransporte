@@ -11,7 +11,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// <summary>
         /// Año del modelo del bus.
         /// </summary>
-        public int Modelo { get; set; }
+        public string Modelo { get; set; }
 
         /// <summary>
         /// Capacidad máxima de pasajeros del bus.
@@ -31,7 +31,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         public Bus()
         {
             IdBus = 0;
-            Modelo = 0;
+            Modelo = string.Empty;
             Capacidad = 0;
             Placa = string.Empty;
             EstadoBus = new EstadoBus();

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mectronics.SistemaGestionTransporte.MS.Conductor</name>
+    </assembly>
+    <members>
+        <member name="T:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador">
+            <summary>
+            Controlador para gestionar las operaciones relacionadas con la entidad <see cref="N:Mectronics.SistemaGestionTransporte.MS.Conductor"/>.
+            </summary>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador.#ctor(Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IConductor.IConductorServicio)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador"/> con un servicio inyectado.
+            </summary>
+            <param name="conductorServicio">Instancia del servicio de conductores.</param>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador.Insertar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto)">
+            <summary>
+            Inserta un nuevo conductor en la base de datos.
+            </summary>
+            <param name="conductorDto">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto"/> con la información a insertar.</param>
+            <returns>Información del conductor insertado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador.Actualizar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto)">
+            <summary>
+            Actualiza un conductor existente en la base de datos.
+            </summary>
+            <param name="conductorDto">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto"/> con la información actualizada.</param>
+            <returns>Información del conductor actualizado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador.Eliminar(System.Int32)">
+            <summary>
+            Elimina un conductor por su identificador.
+            </summary>
+            <param name="id">Identificador único del conductor a eliminar.</param>
+            <returns>Resultado de la operación.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador.Consultar(System.Int32)">
+            <summary>
+            Consulta un conductor basado en los filtros proporcionados.
+            </summary>
+            <param name="id">Identificador único del conductor.</param>
+            <returns>Registro del conductor encontrado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador.ConsultarLista(Mectronics.SistemaGestionTransporte.Tranversales.Filtros.ConductorFiltro)">
+            <summary>
+            Consulta una lista de conductores según los filtros proporcionados.
+            </summary>
+            <param name="filtro">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Filtros.ConductorFiltro"/> con los criterios de búsqueda.</param>
+            <returns>Lista de conductores encontrados.</returns>
+        </member>
+    </members>
+</doc>

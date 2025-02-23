@@ -1,4 +1,5 @@
 ﻿using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
+using Mectronics.SistemaGestionTransporte.Tranversales.Entidades;
 using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;
 
 namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorario
@@ -6,21 +7,21 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorari
     /// <summary>
     /// Define las operaciones del servicio para la entidad <see cref="Bus"/>, donde se dejarán las reglas de negocio.
     /// </summary>
-    public interface IBusServicio
+    public interface IBusHorarioServicio
     {
         /// <summary>
         /// Inserta un nuevo bus en la base de datos.
         /// </summary>
         /// <param name="bus">Objeto <see cref="BusDto"/> con la información a insertar.</param>
         /// <returns>Información del registro creado.</returns>
-        BusDto Insertar(BusDto bus);
+        BusHorarioDto Insertar(BusHorarioDto bus);
 
         /// <summary>
         /// Actualiza un bus existente en la base de datos.
         /// </summary>
         /// <param name="bus">Objeto <see cref="BusDto"/> con la información actualizada.</param>
         /// <returns>Información del registro modificado.</returns>
-        BusDto Actualizar(BusDto bus);
+        BusHorarioDto Actualizar(BusHorarioDto bus);
 
         /// <summary>
         /// Elimina un bus por su identificador.
@@ -34,6 +35,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorari
         /// </summary>
         /// <param name="objFiltro">Objeto <see cref="BusFiltro"/> con los criterios de búsqueda.</param>
         /// <returns>Lista de registros encontrados.</returns>
-        List<BusDto> ConsultarLista(BusFiltro objFiltro);
+        List<BusHorarioDto> ConsultarLista(BusHorarioFiltro objFiltro);
     }
 }

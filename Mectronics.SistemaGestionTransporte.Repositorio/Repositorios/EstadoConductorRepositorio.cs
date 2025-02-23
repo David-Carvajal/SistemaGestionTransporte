@@ -31,7 +31,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public EstadoConductor Consultar(EstadoConductorFiltro filtro)
         {
             EstadoConductor estadoConductor = null;
-            string consultaSql = "SELECT TOP 1 IdEstadoConductor, NombreEstadoConductor FROM EstadoConductor WHERE IdEstadoConductor = @IdEstadoConductor";
+            string consultaSql = "SELECT IdEstadoConductor, NombreEstadoConductor FROM EstadoConductor WHERE IdEstadoConductor = @IdEstadoConductor ORDER BY IdEstadoConductor";
 
             try
             {

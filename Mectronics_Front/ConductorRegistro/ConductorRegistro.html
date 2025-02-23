@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Conductores</title>
+    <link rel="stylesheet" href="ConductorRegistro.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Formulario de Insertar Conductor -->
+        <div class="form-container" id="insertar-form">
+            <h2>Insertar Conductor</h2>
+            <form>
+                <div class="input-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="numero-licencia">Número de Licencia:</label>
+                    <input type="text" id="numero-licencia" required>
+                </div>
+                <div class="input-group">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" required>
+                    </select>
+                </div>
+                <button type="submit">Insertar Conductor</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Actualizar Conductor -->
+        <div class="form-container" id="actualizar-form" style="display: none;">
+            <h2>Actualizar Conductor</h2>
+            <form>
+                <div class="input-group">
+                    <label for="actualizar-id">ID del Conductor:</label>
+                    <input type="number" id="actualizar-id" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-nombre">Nombre:</label>
+                    <input type="text" id="actualizar-nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-numero-licencia">Número de Licencia:</label>
+                    <input type="text" id="actualizar-numero-licencia" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-estado">Estado:</label>
+                    <select id="actualizar-estado" required>
+                        <option value="asignado">Asignado</option>
+                        <option value="disponible">Disponible</option>
+                        <option value="descanso">De Descanso</option>
+                    </select>
+                </div>
+                <button type="submit">Actualizar Conductor</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Consultar Conductor -->
+        <div class="form-container" id="consultar-form" style="display: none;">
+            <h2>Consultar Conductor</h2>
+            <form>
+                <div class="input-group">
+                    <label for="consultar-id">ID del Conductor:</label>
+                    <input type="number" id="consultar-id" required>
+                </div>
+                <button type="submit">Consultar Conductor</button>
+            </form>
+
+            <!-- Área para mostrar los resultados -->
+            <div id="resultado-consulta" style="margin-top: 20px; display: none;">
+                <h3>Datos del Conductor</h3>
+                <p><strong>ID:</strong> <span id="consulta-id"></span></p>
+                <p><strong>Nombre:</strong> <span id="consulta-nombre"></span></p>
+                <p><strong>Número de Licencia:</strong> <span id="consulta-numero-licencia"></span></p>
+                <p><strong>Estado:</strong> <span id="consulta-estado"></span></p>
+            </div>
+        </div>
+
+        <!-- Formulario de Eliminar Conductor -->
+        <div class="form-container" id="eliminar-form" style="display: none;">
+            <h2>Eliminar Conductor</h2>
+            <form>
+                <div class="input-group">
+                    <label for="eliminar-id">ID del Conductor:</label>
+                    <input type="number" id="eliminar-id" required>
+                </div>
+                <button type="submit">Eliminar Conductor</button>
+            </form>
+        </div>
+
+        <!-- Botones para cambiar entre formularios -->
+        <div class="form-switcher">
+            <button onclick="mostrarFormulario('insertar-form')">Insertar Conductor</button>
+            <button onclick="mostrarFormulario('actualizar-form')">Actualizar Conductor</button>
+            <button onclick="mostrarFormulario('consultar-form')">Consultar Conductor</button>
+            <button onclick="mostrarFormulario('eliminar-form')">Eliminar Conductor</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar el formulario seleccionado
+        function mostrarFormulario(formId) {
+            // Oculta todos los formularios
+            document.querySelectorAll('.form-container').forEach(form => {
+                form.style.display = 'none';
+            });
+
+            // Muestra el formulario seleccionado
+            document.getElementById(formId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

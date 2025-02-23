@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mectronics.SistemaGestionTransporte.MS.Usuario")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+061d858a3ac9290db8c41dc52d463a7e078022c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d00df7debbde0d5405251d9d4f01c202ae9c0aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mectronics.SistemaGestionTransporte.MS.Usuario")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mectronics.SistemaGestionTransporte.MS.Usuario")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mectronics.SistemaGestionTransporte.MS.BusHorario</name>
+    </assembly>
+    <members>
+        <member name="T:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController">
+            <summary>
+            Controlador para la gestión de horarios de buses en la API.
+            Proporciona operaciones para insertar, actualizar, eliminar y consultar horarios de buses.
+            </summary>
+        </member>
+        <member name="F:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController._busHorarioServicio">
+            <summary>
+            Servicio de bus horario para manejar la lógica de negocio.
+            </summary>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController.#ctor(Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorario.IBusHorarioServicio)">
+            <summary>
+            Inicializa una nueva instancia del <see cref="T:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController"/> con el servicio inyectado.
+            </summary>
+            <param name="busHorarioServicio">Instancia del servicio de horarios de buses.</param>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController.Insertar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.BusHorarioDto)">
+            <summary>
+            Crea un nuevo horario de bus en el sistema.
+            </summary>
+            <param name="busHorarioDto">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.BusHorarioDto"/> con la información del horario a insertar.</param>
+            <returns>Respuesta con el horario creado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController.Actualizar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.BusHorarioDto)">
+            <summary>
+            Actualiza un horario de bus existente en el sistema.
+            </summary>
+            <param name="busHorarioDto">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.BusHorarioDto"/> con la información actualizada.</param>
+            <returns>Respuesta con el horario actualizado.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController.Eliminar(System.Int32)">
+            <summary>
+            Elimina un horario de bus del sistema por su identificador.
+            </summary>
+            <param name="id">Identificador único del horario de bus a eliminar.</param>
+            <returns>Respuesta con el resultado de la eliminación.</returns>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers.BusHorarioController.ConsultarLista(Mectronics.SistemaGestionTransporte.Tranversales.Filtros.BusHorarioFiltro)">
+            <summary>
+            Consulta una lista de horarios de buses basados en los filtros proporcionados.
+            </summary>
+            <param name="filtro">Objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Filtros.BusHorarioFiltro"/> con los criterios de búsqueda.</param>
+            <returns>Lista de horarios de buses encontrados.</returns>
+        </member>
+    </members>
+</doc>

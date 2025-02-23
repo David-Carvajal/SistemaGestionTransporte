@@ -32,7 +32,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public Rol Consultar(RolFiltro filtro)
         {
             Rol rol = null;
-            string consultaSql = "SELECT IdRol, NombreRol FROM Rol WHERE IdRol = @IdRol";
+            string consultaSql = "SELECT IdRol, NombreRol FROM Roles WHERE IdRol = @IdRol";
 
             try
             {

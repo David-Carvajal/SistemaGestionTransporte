@@ -22,6 +22,11 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         public string Correo { get; set; }
 
         /// <summary>
+        /// Contraseña del Usuario
+        /// </summary>
+        public string Contrasena { get; set; }
+
+        /// <summary>
         /// Rol asignado al usuario.
         /// </summary>
         public RolDto Rol { get; set; }

@@ -16,17 +16,22 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// <summary>
         /// Estado actual del conductor (disponible, en descanso, etc.).
         /// </summary>
-        public EstadoConductor NombreEstadoConductor { get; set; }
+        public EstadoConductor EstadoConductor { get; set; }
 
         /// <summary>
         /// Usuario asociado al conductor.
         /// </summary>
         public Usuario Usuario { get; set; }
+
+        /// <summary>
+        /// Rol asociado al conductor.
+        /// </summary>
+        public Rol Rol { get; set; }
         public Conductor()
         {
             IdConductor = 0;
             NumeroLicencia = string.Empty;
-            NombreEstadoConductor= new EstadoConductor();
+            EstadoConductor= new EstadoConductor();
             Usuario = new Usuario();
         }
     }

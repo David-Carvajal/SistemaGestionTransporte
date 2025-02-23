@@ -22,7 +22,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
             return new Bus
             {
                 IdBus = lector.GetInt32(0),
-                Modelo = lector.GetInt32(1),
+                Modelo = lector.GetString(1),
                 Capacidad = lector.GetInt32(2),
                 Placa = lector.GetString(3),
                 EstadoBus = new EstadoBus
@@ -49,7 +49,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                 buses.Add(new Bus
                 {
                     IdBus = lector.GetInt32(0),
-                    Modelo = lector.GetInt32(1),
+                    Modelo = lector.GetString(1),
                     Capacidad = lector.GetInt32(2),
                     Placa = lector.GetString(3),
                     EstadoBus = new EstadoBus

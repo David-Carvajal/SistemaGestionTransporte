@@ -25,24 +25,25 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
 
                 NumeroLicencia = lector.GetString(1), // Número de licencia del conductor (Columna 1)
 
-                NombreEstadoConductor = new EstadoConductor
+                EstadoConductor = new EstadoConductor
                 {
-                    IdEstadoConductor = lector.GetInt32(2) // Estado del conductor (Columna 2)
+                    IdEstadoConductor = lector.GetInt32(2), // Estado del conductor (Columna 2)
+                    NombreEstadoConductor =lector.GetString(3)// Estado del conductor (Columna 3)
                 },
 
                 Usuario = new Usuario
                 {
-                    IdUsuario = lector.GetInt32(3), // Usuario asociado al conductor (Columna 3)
+                    IdUsuario = lector.GetInt32(4), // Usuario asociado al conductor (Columna 4)
 
-                    Nombre = lector.GetString(4),// Usuario asociado al conductor (Columna 4)
+                    Nombre = lector.GetString(5),// Usuario asociado al conductor (Columna 5)
 
-                    Correo = lector.GetString(5),// Usuario asociado al conductor (Columna 5)
+                    Correo = lector.GetString(6),// Usuario asociado al conductor (Columna 6)
 
-                    Rol = new Rol
-                    {
-                        NombreRol = lector.GetString(6) // Nombre del rol asociado (Columna 6)
-                    }
-
+                },
+                Rol = new Rol
+                {
+                    IdRol = lector.GetInt32(7), // Nombre del rol asociado (Columna 7)
+                    NombreRol = lector.GetString(8) // Estado del conductor (Columna 8)
                 }
             };
         }
@@ -67,7 +68,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
 
                     NumeroLicencia = lector.GetString(1),
 
-                    NombreEstadoConductor = new EstadoConductor
+                    EstadoConductor = new EstadoConductor
                     {
                         IdEstadoConductor = lector.GetInt32(2)
                     },

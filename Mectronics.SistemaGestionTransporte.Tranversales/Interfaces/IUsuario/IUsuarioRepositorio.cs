@@ -43,6 +43,13 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IUsuario
         /// <param name="objFiltro">Objeto <see cref="UsuarioFiltro"/> con los criterios de búsqueda.</param>
         /// <returns>Lista de usuarios encontrados. Si no hay coincidencias, retorna una lista vacía.</returns>
         List<Usuario> ConsultarListado(UsuarioFiltro objFiltro);
+
+        /// <summary>
+        /// Obtiene un usuario por su ID.
+        /// </summary>
+        /// <param name="idUsuario">ID del usuario.</param>
+        /// <returns>El usuario encontrado.</returns>
+        Usuario ObtenerPorId(int idUsuario);
     }
 
 }

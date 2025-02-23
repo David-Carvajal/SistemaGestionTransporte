@@ -1,0 +1,92 @@
+[
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "Method": "Insertar",
+    "RelativePath": "api/ConductorControlador",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conductorDto",
+        "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "Method": "Actualizar",
+    "RelativePath": "api/ConductorControlador",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conductorDto",
+        "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Dtos.ConductorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "Method": "ConsultarLista",
+    "RelativePath": "api/ConductorControlador",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdConductores",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroLicencia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEstadoConductor",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "Method": "Eliminar",
+    "RelativePath": "api/ConductorControlador/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mectronics.SistemaGestionTransporte.MS.Conductor.Controllers.ConductorControlador",
+    "Method": "Consultar",
+    "RelativePath": "api/ConductorControlador/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

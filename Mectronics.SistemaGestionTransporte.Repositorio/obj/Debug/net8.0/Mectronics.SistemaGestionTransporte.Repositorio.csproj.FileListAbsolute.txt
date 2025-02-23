@@ -1,0 +1,16 @@
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\bin\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.deps.json
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\bin\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.dll
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\bin\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.pdb
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\bin\Debug\net8.0\Mectronics.SistemaGestionTransporte.Tranversales.dll
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\bin\Debug\net8.0\Mectronics.SistemaGestionTransporte.Tranversales.pdb
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.csproj.AssemblyReference.cache
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.GeneratedMSBuildEditorConfig.editorconfig
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.AssemblyInfoInputs.cache
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.AssemblyInfo.cs
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.csproj.CoreCompileInputs.cache
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.sourcelink.json
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectroni.9F04C1FF.Up2Date
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.dll
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\refint\Mectronics.SistemaGestionTransporte.Repositorio.dll
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\Mectronics.SistemaGestionTransporte.Repositorio.pdb
+E:\PruebaTecnicaMectronics\Mectronics.SistemaGestionTransporte.Repositorio\obj\Debug\net8.0\ref\Mectronics.SistemaGestionTransporte.Repositorio.dll

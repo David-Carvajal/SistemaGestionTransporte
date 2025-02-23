@@ -16,7 +16,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
         /// <returns>Una instancia de <see cref="Usuario"/> o <c>null</c> si no hay datos.</returns>
         public static Usuario Mapear(IDataReader lector)
         {
-            if (lector == null || !lector.Read())
+            if (lector == null)
                 return null;
 
             return new Usuario
@@ -24,7 +24,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                 IdUsuario = lector.GetInt32(0), // Identificador único del usuario (Columna 0)
                 Nombre = lector.GetString(1),   // Nombre del usuario (Columna 1)
                 Correo = lector.GetString(2),   // Correo electrónico (Columna 2)
-                Contraseña = lector.GetString(3), // Contraseña del usuario (Columna 3) - Debe manejarse con seguridad
+                Contrasena = lector.GetString(3), // Contraseña del usuario (Columna 3) - Debe manejarse con seguridad
                 Rol = new Rol
                 {
                     IdRol = lector.GetInt32(4),  // Identificador del rol (Columna 4)
@@ -52,7 +52,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                     IdUsuario = lector.GetInt32(0),
                     Nombre = lector.GetString(1),
                     Correo = lector.GetString(2),
-                    Contraseña = lector.GetString(3),
+                    Contrasena = lector.GetString(3),
                     Rol = new Rol
                     {
                         IdRol = lector.GetInt32(4),

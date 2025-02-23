@@ -21,7 +21,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// <summary>
         /// Contraseña del usuario (debe manejarse de forma segura).
         /// </summary>
-        public string Contraseña { get; set; }
+        public string Contrasena { get; set; }
 
         /// <summary>
         /// Rol asignado al usuario.
@@ -33,7 +33,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
             IdUsuario = 0;
             Nombre = string.Empty;
             Correo = string.Empty;
-            Contraseña = string.Empty;
+            Contrasena = string.Empty;
             Rol = new Rol();
         }
     }

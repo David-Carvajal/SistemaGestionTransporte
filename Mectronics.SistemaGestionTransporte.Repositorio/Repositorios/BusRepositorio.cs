@@ -32,8 +32,8 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public Bus Consultar(BusFiltro filtro)
         {
             Bus bus = null;
-            string consultaSql = "SELECT TOP 1 b.IdBus, b.Modelo, b.Capacidad, b.Placa, b.IdEstadoBus, e.NombreEstadoBus As NombreEstadoBus" +
-                "FROM Buses b INNER JOIN EstadoBus e ON b.IdEstadoBus = e.IdEstadoBus" +
+            string consultaSql = "SELECT  b.IdBus, b.Modelo, b.Capacidad, b.Placa, b.IdEstadoBus, e.NombreEstadoBus As NombreEstadoBus " +
+                "FROM Buses b INNER JOIN EstadoBus e ON b.IdEstadoBus = e.IdEstadoBus " +
                 "WHERE b.IdBus = @IdBus";
 
             try
@@ -66,8 +66,8 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<Bus> ConsultarListado(BusFiltro filtro)
         {
             List<Bus> buses = [];
-            string consultaSql = "SELECT TOP 1 b.IdBus, b.Modelo, b.Capacidad, b.Placa, b.IdEstadoBus, e.NombreEstadoBus As NombreEstadoBus" +
-                                 "FROM Buses b INNER JOIN EstadoBus e ON b.IdEstadoBus = e.IdEstadoBus" +
+            string consultaSql = "SELECT b.IdBus, b.Modelo, b.Capacidad, b.Placa, b.IdEstadoBus, e.NombreEstadoBus As NombreEstadoBus " +
+                                 "FROM Buses b INNER JOIN EstadoBus e ON b.IdEstadoBus = e.IdEstadoBus " +
                                  "WHERE b.Placa like @Placa";
 
             if (filtro.IdBus > 0)
@@ -117,7 +117,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El número de filas afectadas en la base de datos.</returns>        
         public int Eliminar(int idBus)
         {
-            string strComandoSql = "DELETE FROM Bus WHERE IdBus = @IdBus";
+            string strComandoSql = "DELETE FROM Buses WHERE IdBus = @IdBus";
             int filasAfectadas = 0;
 
             try
@@ -181,8 +181,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El número de filas afectadas en la base de datos.</returns>        
         public int Actualizar(Bus bus)
         {
-            string strComandoSql = @"UPDATE Bus 
-                                     SET Modelo = @Modelo, Capacidad = @Capacidad, Placa = @Placa, IdEstadoBus = @IdEstadoBus
+            string strComandoSql = @"UPDATE Buses SET Modelo = @Modelo, Capacidad = @Capacidad, Placa = @Placa, IdEstadoBus = @IdEstadoBus
                                      WHERE IdBus = @IdBus";
             int filasAfectadas = 0;
 

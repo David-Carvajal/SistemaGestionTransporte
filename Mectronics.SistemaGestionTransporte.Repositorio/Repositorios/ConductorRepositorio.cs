@@ -32,8 +32,8 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public Conductor Consultar(ConductorFiltro objFiltro)
         {
             Conductor conductor = null;
-            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol As Rol" +
-                "FROM Conductores c INNER JOIN Usuario u ON c.IdUsuario = u.IdUsuario" +
+            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IdEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol As Rol " +
+                "FROM Conductores c INNER JOIN Usuarios u ON c.IdUsuario = u.IdUsuario " +
                 "WHERE c.IdConductor = @IdConductor";
 
             try
@@ -52,7 +52,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
             }
             finally
             {
-                _conexion.Cerrar();
+                    _conexion.Cerrar();
             }
 
             return conductor;
@@ -66,8 +66,8 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<Conductor> ConsultarListado(ConductorFiltro objFiltro)
         {
             List<Conductor> conductores = [];
-            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol As Rol" +
-                                 "FROM Conductores c INNER JOIN Usuario u ON c.IdUsuario = u.IdUsuario" +
+            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IdEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol As Rol " +
+                                 "FROM Conductores c INNER JOIN Usuarios u ON c.IdUsuario = u.IdUsuario " +
                                  "WHERE c.NumeroLicencia like @NumeroLicencia";
 
             if (objFiltro.IdEstadoConductor > 0)
@@ -110,7 +110,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El número de filas afectadas en la base de datos.</returns>
         public int Eliminar(int idConductor)
         {
-            string strComandoSql = "DELETE FROM Conductor WHERE IdConductor = @IdConductor";
+            string strComandoSql = "DELETE FROM Conductores WHERE IdConductor = @IdConductor";
             int filasAfectadas = 0;
 
             try
@@ -146,7 +146,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
             {
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@NumeroLicencia", conductor.NumeroLicencia, SqlDbType.VarChar);
-                _conexion.AgregarParametroSql("@IdEstadoConductor", conductor.NombreEstadoConductor.IdEstadoConductor, SqlDbType.Int);
+                _conexion.AgregarParametroSql("@IdEstadoConductor", conductor.EstadoConductor.IdEstadoConductor, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@IdUsuario", conductor.Usuario.IdUsuario, SqlDbType.Int);
 
                 object resultado = _conexion.EjecutarEscalarSql(strComandoSql);
@@ -179,7 +179,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@IdConductor", conductor.IdConductor, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@NumeroLicencia", conductor.NumeroLicencia, SqlDbType.VarChar);
-                _conexion.AgregarParametroSql("@IdEstadoConductor", conductor.NombreEstadoConductor.IdEstadoConductor, SqlDbType.Int);
+                _conexion.AgregarParametroSql("@IdEstadoConductor", conductor.EstadoConductor.IdEstadoConductor, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@IdUsuario", conductor.Usuario.IdUsuario, SqlDbType.Int);
 
                 filasAfectadas = _conexion.EjecutarComandoSql(strComandoSql);

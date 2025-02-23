@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Conductor Horario</title>
+    <link rel="stylesheet" href="ConductorHorario.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Formulario de Insertar Conductor Horario -->
+        <div class="form-container" id="insertar-form">
+            <h2>Insertar Conductor Horario</h2>
+            <form>
+                <div class="input-group">
+                    <label for="idConductorHorario">ID Conductor Horario:</label>
+                    <input type="number" id="idConductorHorario" required>
+                </div>
+                <div class="input-group">
+                    <label for="idConductor">ID Conductor:</label>
+                    <input type="number" id="idConductor" required>
+                </div>
+                <div class="input-group">
+                    <label for="idBus">ID Bus:</label>
+                    <input type="number" id="idBus" required>
+                </div>
+                <div class="input-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <div class="input-group">
+                    <label for="diaSemana">Día de la Semana:</label>
+                    <input type="text" id="diaSemana" required>
+                </div>
+                <div class="input-group">
+                    <label for="horaEntrada">Hora de Entrada:</label>
+                    <input type="time" id="horaEntrada" required>
+                </div>
+                <div class="input-group">
+                    <label for="horaSalida">Hora de Salida:</label>
+                    <input type="time" id="horaSalida" required>
+                </div>
+                <button type="submit">Insertar Conductor Horario</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Actualizar Conductor Horario -->
+        <div class="form-container" id="actualizar-form" style="display: none;">
+            <h2>Actualizar Conductor Horario</h2>
+            <form>
+                <div class="input-group">
+                    <label for="actualizar-idConductorHorario">ID Conductor Horario:</label>
+                    <input type="number" id="actualizar-idConductorHorario" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-idConductor">ID Conductor:</label>
+                    <input type="number" id="actualizar-idConductor" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-idBus">ID Bus:</label>
+                    <input type="number" id="actualizar-idBus" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-fecha">Fecha:</label>
+                    <input type="date" id="actualizar-fecha" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-diaSemana">Día de la Semana:</label>
+                    <input type="text" id="actualizar-diaSemana" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-horaEntrada">Hora de Entrada:</label>
+                    <input type="time" id="actualizar-horaEntrada" required>
+                </div>
+                <div class="input-group">
+                    <label for="actualizar-horaSalida">Hora de Salida:</label>
+                    <input type="time" id="actualizar-horaSalida" required>
+                </div>
+                <button type="submit">Actualizar Conductor Horario</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Consultar Listado de Conductor Horario -->
+        <div class="form-container" id="consultar-listado-form" style="display: none;">
+            <h2>Consultar Listado de Conductor Horario</h2>
+            <form>
+                <div class="input-group">
+                    <label for="filtro-fecha">Filtrar por Fecha:</label>
+                    <input type="date" id="filtro-fecha">
+                </div>
+                <div class="input-group">
+                    <label for="filtro-diaSemana">Filtrar por Día de la Semana:</label>
+                    <input type="text" id="filtro-diaSemana">
+                </div>
+                <button type="submit">Consultar Listado</button>
+            </form>
+
+            <!-- Área para mostrar los resultados -->
+            <div id="resultado-consultar-listado" style="margin-top: 20px; display: none;">
+                <h3>Listado de Conductor Horario</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Conductor Horario</th>
+                            <th>ID Conductor</th>
+                            <th>ID Bus</th>
+                            <th>Fecha</th>
+                            <th>Día de la Semana</th>
+                            <th>Hora de Entrada</th>
+                            <th>Hora de Salida</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-conductor-horario">
+                        <!-- Los datos se llenarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Formulario de Eliminar Conductor Horario -->
+        <div class="form-container" id="eliminar-form" style="display: none;">
+            <h2>Eliminar Conductor Horario</h2>
+            <form>
+                <div class="input-group">
+                    <label for="eliminar-idConductorHorario">ID Conductor Horario:</label>
+                    <input type="number" id="eliminar-idConductorHorario" required>
+                </div>
+                <button type="submit">Eliminar Conductor Horario</button>
+            </form>
+        </div>
+
+        <!-- Botones para cambiar entre formularios -->
+        <div class="form-switcher">
+            <button onclick="mostrarFormulario('insertar-form')">Insertar Conductor Horario</button>
+            <button onclick="mostrarFormulario('actualizar-form')">Actualizar Conductor Horario</button>
+            <button onclick="mostrarFormulario('consultar-listado-form')">Consultar Listado</button>
+            <button onclick="mostrarFormulario('eliminar-form')">Eliminar Conductor Horario</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar el formulario seleccionado
+        function mostrarFormulario(formId) {
+            // Oculta todos los formularios
+            document.querySelectorAll('.form-container').forEach(form => {
+                form.style.display = 'none';
+            });
+
+            // Muestra el formulario seleccionado
+            document.getElementById(formId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

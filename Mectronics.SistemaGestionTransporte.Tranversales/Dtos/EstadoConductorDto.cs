@@ -14,6 +14,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         /// <summary>
         /// Descripción del estado del conductor.
         /// </summary>
-        public string Estado { get; set; }
+        public string NombreEstadoConductor { get; set; }
     }
 }

@@ -32,8 +32,8 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public Usuario Consultar(UsuarioFiltro filtro)
         {
             Usuario usuario = null;
-            string consultaSql = "SELECT u.IdUsuario, u.Nombre, u.Correo, u.Contraseña, u.IdRol, r.NombreRol " +
-                "FROM Usuario u INNER JOIN Rol r ON u.IdRol = r.IdRol " +
+            string consultaSql = "SELECT u.IdUsuario, u.Nombre, u.Correo, u.Contrasena, u.IdRol, r.NombreRol " +
+                "FROM Usuarios u INNER JOIN Roles r ON u.IdRol = r.IdRol " +
                 "WHERE u.IdUsuario = @IdUsuario";
 
             try
@@ -68,30 +68,30 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
             string consultaSql = "SELECT u.IdUsuario, u.Nombre, u.Correo, u.Contraseña, u.IdRol, r.NombreRol " +
                 "FROM Usuario u INNER JOIN Rol r ON u.IdRol = r.IdRol " +
                 "WHERE u.Nombre LIKE @Nombre";
-            if (filtro.IdRol > 0) 
+            if (filtro.IdRol > 0)
             {
                 consultaSql += "AND u.IdRol = @IdRol";
             }
 
-                try
-                {
-                    _conexion.LimpiarParametros();
+            try
+            {
+                _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@Nombre", $"%{filtro.Nombre}%", SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@IdRol", filtro.IdRol, SqlDbType.Int);
 
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
-                    {
-                        usuarios = UsuarioMapeo.MapearLista(resultado);
-                    }
-                }
-                catch (Exception ex)
                 {
-                    throw new Exception("Error al consultar la lista de usuarios en la base de datos.", ex);
+                    usuarios = UsuarioMapeo.MapearLista(resultado);
                 }
-                finally
-                {
-                    _conexion.Cerrar();
-                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al consultar la lista de usuarios en la base de datos.", ex);
+            }
+            finally
+            {
+                _conexion.Cerrar();
+            }
 
             return usuarios;
         }
@@ -102,7 +102,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El número de filas afectadas en la base de datos.</returns>   
         public int Eliminar(int idUsuario)
         {
-            string strComandoSql = "DELETE FROM Usuario WHERE IdUsuario = @IdUsuario";
+            string strComandoSql = "DELETE FROM Usuarios WHERE IdUsuario = @IdUsuario";
             int filasAfectadas = 0;
 
             try
@@ -129,7 +129,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El número de filas afectadas en la base de datos.</returns>
         public int Insertar(Usuario usuario)
         {
-            string strComandoSql = "INSERT INTO Usuario (Nombre, Correo, Contraseña, IdRol) VALUES (@Nombre, @Correo, @Contraseña, @IdRol); SELECT SCOPE_IDENTITY();";
+            string strComandoSql = "INSERT INTO Usuarios (Nombre, Correo, Contrasena, IdRol) VALUES (@Nombre, @Correo, @Contrasena, @IdRol); SELECT SCOPE_IDENTITY();";
             int idUsuario = 0;
 
             try
@@ -137,7 +137,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@Nombre", usuario.Nombre, SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@Correo", usuario.Correo, SqlDbType.VarChar);
-                _conexion.AgregarParametroSql("@Contraseña", usuario.Contraseña, SqlDbType.VarChar);
+                _conexion.AgregarParametroSql("@Contrasena", usuario.Contrasena, SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@IdRol", usuario.Rol.IdRol, SqlDbType.Int);
 
                 object resultado = _conexion.EjecutarEscalarSql(strComandoSql);
@@ -161,7 +161,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         ///<param name="usuario">Objeto<see cref="Usuario"/> con la informacion actualizada.</param>
         public int Actualizar(Usuario usuario)
         {
-            string strComandoSql = "UPDATE Usuario SET Nombre = @Nombre, Correo = @Correo, Contraseña = @Contraseña, IdRol = @IdRol WHERE IdUsuario = @IdUsuario";
+            string strComandoSql = "UPDATE Usuarios SET Nombre = @Nombre, Correo = @Correo, Contrasena = @Contrasena, IdRol = @IdRol WHERE IdUsuario = @IdUsuario";
             int filasAfectadas = 0;
 
             try
@@ -170,7 +170,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.AgregarParametroSql("@IdUsuario", usuario.IdUsuario, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@Nombre", usuario.Nombre, SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@Correo", usuario.Correo, SqlDbType.VarChar);
-                _conexion.AgregarParametroSql("@Contraseña", usuario.Contraseña, SqlDbType.VarChar);
+                _conexion.AgregarParametroSql("@Contrasena", usuario.Contrasena, SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@IdRol", usuario.Rol.IdRol, SqlDbType.Int);
 
                 filasAfectadas = _conexion.EjecutarComandoSql(strComandoSql);
@@ -185,6 +185,43 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
             }
 
             return filasAfectadas;
+        }
+
+        /// <summary>
+        /// Obtiene un usuario por su ID.
+        /// </summary>
+        /// <param name="idUsuario">ID del usuario.</param>
+        /// <returns>El usuario encontrado.</returns>
+        public Usuario ObtenerPorId(int idUsuario)
+        {
+            Usuario usuario = null;
+            string consultaSql = "SELECT u.IdUsuario, u.Nombre, u.Correo, u.Contrasena, u.IdRol, r.NombreRol " +
+                                 "FROM Usuarios u INNER JOIN Roles r ON u.IdRol = r.IdRol " +
+                                 "WHERE u.IdUsuario = @IdUsuario";
+
+            try
+            {
+                _conexion.LimpiarParametros();
+                _conexion.AgregarParametroSql("@IdUsuario", idUsuario, SqlDbType.Int);
+
+                using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
+                {
+                    if (resultado.Read()) // Si hay resultados, mapea el usuario
+                    {
+                        usuario = UsuarioMapeo.Mapear(resultado);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener el usuario por ID en la base de datos.", ex);
+            }
+            finally
+            {
+                _conexion.Cerrar();
+            }
+
+            return usuario;
         }
     }
 }

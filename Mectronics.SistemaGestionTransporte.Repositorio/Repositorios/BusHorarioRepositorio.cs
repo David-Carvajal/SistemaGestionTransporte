@@ -31,7 +31,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<BusHorario> ConsultarListado(BusHorarioFiltro objFiltro)
         {
             List<BusHorario> horarios = new List<BusHorario>();
-            string consultaSql = "SELECT * FROM BusHorario  WHERE IdBusHorario = @IdBusHorario";
+            string consultaSql = "SELECT * FROM BusHorario ";
 
             if (objFiltro.Fecha != DateTime.MinValue)
             {
@@ -45,7 +45,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
             {
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@IdBusHorario", objFiltro.IdBusHorario, SqlDbType.Int);
-                _conexion.AgregarParametroSql("@Fecha", objFiltro.Fecha, SqlDbType.DateTime);
+                _conexion.AgregarParametroSql("@Fecha", objFiltro.Fecha, SqlDbType.Date);
                 _conexion.AgregarParametroSql("@DiaSemana", objFiltro.DiaSemana, SqlDbType.NVarChar);
 
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
