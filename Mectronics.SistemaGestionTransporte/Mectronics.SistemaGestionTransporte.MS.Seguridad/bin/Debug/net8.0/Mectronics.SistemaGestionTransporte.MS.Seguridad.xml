@@ -4,5 +4,28 @@
         <name>Mectronics.SistemaGestionTransporte.MS.Seguridad</name>
     </assembly>
     <members>
+        <member name="T:Mectronics.SistemaGestionTransporte.MS.Seguridad.Controllers.AutenticacionController">
+            <summary>
+            Controlador para gestionar la autenticación de usuarios en la API.
+            </summary>
+        </member>
+        <member name="F:Mectronics.SistemaGestionTransporte.MS.Seguridad.Controllers.AutenticacionController._seguridadServicio">
+            <summary>
+            Servicio de seguridad que maneja la lógica de autenticación.
+            </summary>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Seguridad.Controllers.AutenticacionController.#ctor(Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.ISeguridad.ISeguridadServicio)">
+            <summary>
+            Constructor del controlador que recibe el servicio de seguridad por inyección de dependencias.
+            </summary>
+            <param name="seguridadServicio">Instancia del servicio de seguridad.</param>
+        </member>
+        <member name="M:Mectronics.SistemaGestionTransporte.MS.Seguridad.Controllers.AutenticacionController.Validar(Mectronics.SistemaGestionTransporte.Tranversales.Dtos.AutenticacionDto)">
+            <summary>
+            Valida las credenciales del usuario y devuelve sus datos si la autenticación es exitosa.
+            </summary>
+            <param name="autenticacion">Objeto que contiene el correo y la contraseña del usuario.</param>
+            <returns>Un objeto <see cref="T:Mectronics.SistemaGestionTransporte.Tranversales.Dtos.UsuarioDto"/> con la información del usuario autenticado.</returns>
+        </member>
     </members>
 </doc>

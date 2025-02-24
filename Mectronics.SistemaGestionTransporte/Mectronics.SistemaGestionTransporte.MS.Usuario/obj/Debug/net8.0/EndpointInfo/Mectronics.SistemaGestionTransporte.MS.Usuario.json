@@ -58,6 +58,13 @@
             }
           },
           {
+            "name": "Correo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "IdRol",
             "in": "query",
             "schema": {
@@ -265,7 +272,7 @@
             "type": "string",
             "nullable": true
           },
-          "estado": {
+          "estadoBus": {
             "$ref": "#/components/schemas/EstadoBusDto"
           }
         },

@@ -14,6 +14,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         /// <summary>
         /// Descripción del estado del bus.
         /// </summary>
-        public string Estado { get; set; }
+        public string NombreEstadoBus { get; set; }
     }
 }

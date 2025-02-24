@@ -303,7 +303,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "estado": {
+          "nombreEstadoBus": {
             "type": "string",
             "nullable": true
           }

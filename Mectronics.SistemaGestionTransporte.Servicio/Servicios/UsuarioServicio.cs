@@ -1,5 +1,4 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
 using Mectronics.SistemaGestionTransporte.Tranversales.Entidades;
 using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;

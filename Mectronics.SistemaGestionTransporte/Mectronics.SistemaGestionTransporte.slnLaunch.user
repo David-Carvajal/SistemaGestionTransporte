@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.MS.Bus\\Mectronics.SistemaGestionTransporte.MS.Bus.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.MS.Conductor\\Mectronics.SistemaGestionTransporte.MS.Conductor.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

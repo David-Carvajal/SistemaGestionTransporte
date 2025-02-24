@@ -21,20 +21,29 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
 
             return new BusHorario
             {
-                IdBusHorario = lector.GetInt32(0),  // Obtiene el IdBusHorario (Columna 0)
+                IdBusHorario = lector.GetInt32(0),  
 
                 Bus = new Bus
                 {
-                    IdBus = lector.GetInt32(1) // Obtiene el IdBus asociado (Columna 1)
+                    IdBus = lector.GetInt32(1),
+                    Placa = lector.GetString(2),
+                    Capacidad = lector.GetInt32(3),
+                    Modelo = lector.GetString(4),
                 },
 
-                Fecha = lector.GetDateTime(2),  // Obtiene la Fecha (Columna 2)
+                EstadoBus = new EstadoBus 
+                {
+                    IdEstadoBus = lector.GetInt32(5),
+                    NombreEstadoBus = lector.GetString(6)
+                },
 
-                DiaSemana = lector.GetString(3), // Obtiene los Días de la semana (Columna 3)
+                Fecha = lector.GetDateTime(7),  
 
-                HoraEntrada = lector.GetDateTime(4),  // Obtiene HoraEntrada como DateTime (Columna 4)
+                DiaSemana = lector.GetString(8), 
 
-                HoraSalida = lector.GetDateTime(5)   // Obtiene HoraSalida como DateTime (Columna 5)
+                HoraEntrada = lector.GetDateTime(9),  
+
+                HoraSalida = lector.GetDateTime(10)   
             };
         }
 
@@ -55,19 +64,29 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                 horarios.Add(new BusHorario
                 {
                     IdBusHorario = lector.GetInt32(0),
+                    Fecha = lector.GetDateTime(1),
+
+                    DiaSemana = lector.GetString(2),
+
+                    HoraEntrada = lector.GetDateTime(3),
+
+                    HoraSalida = lector.GetDateTime(4),
 
                     Bus = new Bus
                     {
-                        IdBus = lector.GetInt32(1)
+                        IdBus = lector.GetInt32(5),
+                        Placa = lector.GetString(6),
+                        Capacidad = lector.GetInt32(7),
+                        Modelo = lector.GetString(8),
                     },
 
-                    Fecha = lector.GetDateTime(2),
+                    EstadoBus = new EstadoBus
+                    {
+                        IdEstadoBus = lector.GetInt32(9),
+                        NombreEstadoBus = lector.GetString(10)
+                    },
 
-                    DiaSemana = lector.GetString(3),
-
-                    HoraEntrada = lector.GetDateTime(4),
-
-                    HoraSalida = lector.GetDateTime(5)
+                    
                 });
             }
 

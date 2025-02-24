@@ -12,11 +12,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         public int IdBusHorario { get; set; }
 
         /// <summary>
-        /// Bus asignado a este horario.
-        /// </summary>
-        public BusDto Bus { get; set; }
-
-        /// <summary>
         /// Fecha del horario asignado.
         /// </summary>
         public DateTime Fecha { get; set; }
@@ -35,5 +30,17 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         /// Hora de salida del bus.
         /// </summary>
         public DateTime HoraSalida { get; set; }
+
+        /// <summary>
+        /// Bus asignado a este horario.
+        /// </summary>
+        public BusDto Bus { get; set; }
+        
+        /// <summary>
+        /// Bus asignado a este horario.
+        /// </summary>
+        public EstadoBusDto Estado  { get; set; }
+
+
     }
 }

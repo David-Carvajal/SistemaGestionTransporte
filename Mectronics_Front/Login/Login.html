@@ -1,75 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login y Registro</title>
-    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="Login.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
-<body>
-    <div class="container">
-        <!-- Formulario de Iniciar Sesión -->
-        <div class="form-container" id="login-form">
-            <h2>Iniciar Sesión</h2>
-            <form id="formularioAutenticacion">
-                <div class="input-group">
-                    <label for="login-email">Correo:</label>
-                    <input type="email" id="login-email" required>
-                </div>
-                <div class="input-group">
-                    <label for="login-password">Contraseña:</label>
-                    <input type="password" id="login-password" required>
-                </div>
-                <button type="submit" >Iniciar Sesión</button>
-            </form>
-            <p>¿No tienes una cuenta? <a href="#" id="switch-to-register">Regístrate</a></p>
-        </div>
 
-        <!-- Formulario de Registro -->
-        <div class="form-container" id="register-form" style="display: none;">
-            <h2>Registrar</h2>
-            <form>
+<body class="custom-bg">
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="formularioAutenticacion">
+            <div class="mb-3">
+                <label for="login-email" class="form-label">Correo</label>
                 <div class="input-group">
-                    <label for="register-name">Nombre:</label>
-                    <input type="text" id="register-name" required>
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="email" id="login-email" class="form-control" placeholder="Ingrese su correo" required>
                 </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="login-password" class="form-label">Contraseña</label>
                 <div class="input-group">
-                    <label for="register-email">Correo:</label>
-                    <input type="email" id="register-email" required>
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="login-password" class="form-control" placeholder="Ingrese su contraseña"
+                        required>
                 </div>
-                <div class="input-group">
-                    <label for="register-password">Contraseña:</label>
-                    <input type="password" id="register-password" required>
-                </div>
-                <div class="input-group">
-                    <label for="register-role">Rol:</label>
-                    <select id="register-role" required>
-                        <option value="administrador">Administrador</option>
-                        <option value="conductor">Conductor</option>
-                    </select>
-                </div>
-                <button type="submit">Registrar</button>
-            </form>
-            <p>¿Ya tienes una cuenta? <a href="#" id="switch-to-login">Inicia Sesión</a></p>
-        </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+        </form>
     </div>
 
-    <script>
-        // Cambiar entre formularios de Iniciar Sesión y Registrar
-        document.getElementById('switch-to-register').addEventListener('click', function() {
-            document.getElementById('login-form').style.display = 'none';
-            document.getElementById('register-form').style.display = 'block';
-            document.body.classList.add('register-mode');
-        });
-
-        document.getElementById('switch-to-login').addEventListener('click', function() {
-            document.getElementById('register-form').style.display = 'none';
-            document.getElementById('login-form').style.display = 'block';
-            document.body.classList.remove('register-mode');
-        });
-    </script>
 </body>
-<script src="../Scripts/Login.js"></script>  
-<script src="../Scripts/Encriptar.js"></script>  
+<script src="../Scripts/Login.js"></script>
+<script src="../Scripts/Encriptar.js"></script>
+<script src="../Scripts/Configuracion.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
 </html>

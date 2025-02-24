@@ -18,6 +18,11 @@
         "IsRequired": false
       },
       {
+        "Name": "Correo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "IdRol",
         "Type": "System.Int32",
         "IsRequired": false

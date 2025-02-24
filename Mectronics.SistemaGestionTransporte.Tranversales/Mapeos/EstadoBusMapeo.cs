@@ -22,7 +22,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
             return new EstadoBus
             {
                 IdEstadoBus = lector.GetInt32(0), // Identificador único del estado del bus (Columna 0)
-                Estado = lector.GetString(1) // Descripción del estado del bus (Columna 1)
+                NombreEstadoBus = lector.GetString(1) // Descripción del estado del bus (Columna 1)
             };
         }
 
@@ -43,7 +43,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                 estadobus.Add(new EstadoBus
                 {
                     IdEstadoBus = lector.GetInt32(0),
-                    Estado = lector.GetString(1)
+                    NombreEstadoBus = lector.GetString(1)
                 });
             }
 

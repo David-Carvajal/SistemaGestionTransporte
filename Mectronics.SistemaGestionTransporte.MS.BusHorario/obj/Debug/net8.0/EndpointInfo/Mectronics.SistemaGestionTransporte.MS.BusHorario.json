@@ -253,9 +253,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "bus": {
-            "$ref": "#/components/schemas/BusDto"
-          },
           "fecha": {
             "type": "string",
             "format": "date-time"
@@ -271,6 +268,12 @@
           "horaSalida": {
             "type": "string",
             "format": "date-time"
+          },
+          "bus": {
+            "$ref": "#/components/schemas/BusDto"
+          },
+          "estado": {
+            "$ref": "#/components/schemas/EstadoBusDto"
           }
         },
         "additionalProperties": false

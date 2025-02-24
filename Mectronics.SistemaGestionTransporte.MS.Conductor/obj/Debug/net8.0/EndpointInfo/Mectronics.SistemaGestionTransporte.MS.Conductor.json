@@ -279,6 +279,9 @@
           },
           "usuario": {
             "$ref": "#/components/schemas/UsuarioDto"
+          },
+          "rol": {
+            "$ref": "#/components/schemas/RolDto"
           }
         },
         "additionalProperties": false

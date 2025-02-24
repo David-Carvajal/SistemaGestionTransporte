@@ -70,13 +70,30 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
 
                     EstadoConductor = new EstadoConductor
                     {
-                        IdEstadoConductor = lector.GetInt32(2)
+                        IdEstadoConductor = Convert.ToInt32(lector.GetInt32(2)),
+
+                        //NombreEstadoConductor = lector.GetString(3)
                     },
 
                     Usuario = new Usuario
                     {
-                        IdUsuario = lector.GetInt32(3)
+                        IdUsuario = Convert.ToInt32(lector.GetInt32(3)),
+
+                        Nombre = lector.GetString(4),
+
+                        Correo = lector.GetString(5),
+
+                        //Contrasena = lector.GetString(7)
+                    },
+
+                    
+                    Rol = new Rol
+                    {
+                        IdRol = Convert.ToInt32(lector.GetInt32(6)),
+                        //NombreRol = lector.GetString(9) 
                     }
+
+
                 });
             }
 

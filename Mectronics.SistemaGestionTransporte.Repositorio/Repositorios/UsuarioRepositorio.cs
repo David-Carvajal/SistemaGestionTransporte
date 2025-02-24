@@ -1,5 +1,4 @@
-﻿
-using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IUsuario;
+﻿using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IUsuario;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces;
 using Mectronics.SistemaGestionTransporte.Tranversales.Entidades;
 using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;

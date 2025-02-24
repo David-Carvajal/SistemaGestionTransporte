@@ -15,7 +15,9 @@
         "tags": [
           "Autenticacion"
         ],
+        "summary": "Valida las credenciales del usuario y devuelve sus datos si la autenticación es exitosa.",
         "requestBody": {
+          "description": "Objeto que contiene el correo y la contraseña del usuario.",
           "content": {
             "application/json": {
               "schema": {

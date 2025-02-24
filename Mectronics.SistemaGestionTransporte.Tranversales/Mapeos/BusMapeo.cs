@@ -1,6 +1,7 @@
 ﻿
 using Mectronics.SistemaGestionTransporte.Tranversales.Entidades;
 using System.Data;
+using System.Reflection;
 
 namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
 {
@@ -27,7 +28,8 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                 Placa = lector.GetString(3),
                 EstadoBus = new EstadoBus
                 {
-                    IdEstadoBus = Convert.ToInt32(lector.GetInt32(4))
+                    IdEstadoBus = Convert.ToInt32(lector.GetInt32(4)),
+                    NombreEstadoBus = lector.GetString(5)
                 }
             };
         }
@@ -54,7 +56,8 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                     Placa = lector.GetString(3),
                     EstadoBus = new EstadoBus
                     {
-                        IdEstadoBus = Convert.ToInt32(lector.GetInt32(4))
+                        IdEstadoBus = Convert.ToInt32(lector.GetInt32(4)),
+                        NombreEstadoBus = lector.GetString(5)
                     }
                 });
             }

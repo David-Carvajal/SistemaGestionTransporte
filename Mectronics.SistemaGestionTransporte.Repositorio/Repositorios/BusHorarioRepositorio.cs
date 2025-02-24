@@ -31,7 +31,9 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<BusHorario> ConsultarListado(BusHorarioFiltro objFiltro)
         {
             List<BusHorario> horarios = new List<BusHorario>();
-            string consultaSql = "SELECT * FROM BusHorario ";
+            string consultaSql = "SELECT h.IdBusHorario, h.Fecha,h.DiaSemana, h.HoraEntrada, h.HoraSalida, b.IdBus, b.Placa,  b.Capacidad, b.Modelo, eb.IdEstadoBus, eb.NombreEstadoBus " +
+                "FROM BusHorario h JOIN Buses b ON h.IdBus = b.IdBus JOIN EstadoBus eb ON b.IdEstadoBus = eb.IdEstadoBus";
+
             if (objFiltro.IdBusHorario !=0)
             {
                 consultaSql += "WHERE IdBusHorario = @IdBusHorario ";

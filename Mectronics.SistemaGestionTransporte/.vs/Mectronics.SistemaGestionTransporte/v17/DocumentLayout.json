@@ -3,10 +3,49 @@
   "WorkspaceRootPath": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1BE645F-20E0-4B71-8A0B-5E40B3A8E4B9}|..\\Mectronics.SistemaGestionTransporte.Servicio\\Mectronics.SistemaGestionTransporte.Servicio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.servicio\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\dtos\\estadobusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\entidades\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\entidades\\estadobus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\dtos\\busdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\mapeos\\busmapeo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83248D2F-AA7C-4280-8E2A-DDF6B382D364}|..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.repositorio\\repositorios\\busrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\filtros\\busfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\dtos\\bushorariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83248D2F-AA7C-4280-8E2A-DDF6B382D364}|..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.repositorio\\repositorios\\bushorariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\mapeos\\bushorariomapeo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83248D2F-AA7C-4280-8E2A-DDF6B382D364}|..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.repositorio\\repositorios\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\mapeos\\conductoresmapeo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72973346-E54B-4244-8F78-95AA201F1A08}|..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.tranversales\\entidades\\bushorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83248D2F-AA7C-4280-8E2A-DDF6B382D364}|..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.repositorio\\repositorios\\conductorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83248D2F-AA7C-4280-8E2A-DDF6B382D364}|..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj|e:\\pruebatecnicamectronics\\mectronics.sistemagestiontransporte.repositorio\\repositorios\\conductorhorariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,7 +55,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -24,28 +63,239 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "EstadoBusDto.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\EstadoBusDto.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\EstadoBusDto.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\EstadoBusDto.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\EstadoBusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:11:32.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BusDto.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusDto.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusDto.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusDto.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:09:37.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BusFiltro.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\BusFiltro.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\BusFiltro.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\BusFiltro.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Filtros\\BusFiltro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:08:26.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BusMapeo.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusMapeo.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusMapeo.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusMapeo.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusMapeo.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:07:38.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BusRepositorio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusRepositorio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusRepositorio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusRepositorio.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwGEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:06:54.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "UsuarioRepositorio.cs",
               "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
               "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
               "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
               "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\UsuarioRepositorio.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAjwEAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T19:58:30.46Z",
+              "WhenOpened": "2025-02-24T20:50:00.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioServicio.cs",
-              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
-              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
-              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
-              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Servicios\\UsuarioServicio.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "BusHorarioDto.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusHorarioDto.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusHorarioDto.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusHorarioDto.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Dtos\\BusHorarioDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA1wCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T19:58:04.952Z",
+              "WhenOpened": "2025-02-24T20:09:13.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BusHorarioMapeo.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusHorarioMapeo.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusHorarioMapeo.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusHorarioMapeo.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\BusHorarioMapeo.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwFQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:55:53.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BusHorarioRepositorio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusHorarioRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusHorarioRepositorio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusHorarioRepositorio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\BusHorarioRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T20:38:49.633Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "26a4f477-1323-4c31-aa38-2ad2c0b56e23",
+        "Display": 0,
+        "X": 1,
+        "Y": 1,
+        "Width": 1534,
+        "Height": 814,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ConductorRepositorio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorRepositorio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorRepositorio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorRepositorio.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:59:07.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ConductorHorarioRepositorio.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorHorarioRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorHorarioRepositorio.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorHorarioRepositorio.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Repositorios\\ConductorHorarioRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:59:07.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bus.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\Bus.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\Bus.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\Bus.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\Bus.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:55:01.822Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "ea3f84e7-1e1b-419b-ac2c-3bcce532a7c8",
+        "Display": 0,
+        "X": 1,
+        "Y": 1,
+        "Width": 1534,
+        "Height": 814,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EstadoBus.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\EstadoBus.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\EstadoBus.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\EstadoBus.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\EstadoBus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:07:25.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ConductoresMapeo.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\ConductoresMapeo.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\ConductoresMapeo.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\ConductoresMapeo.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mapeos\\ConductoresMapeo.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:04:45.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BusHorario.cs",
+              "DocumentMoniker": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\BusHorario.cs",
+              "RelativeDocumentMoniker": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\BusHorario.cs",
+              "ToolTip": "E:\\PruebaTecnicaMectronics\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\BusHorario.cs",
+              "RelativeToolTip": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Entidades\\BusHorario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:05:32.085Z",
               "EditorCaption": ""
             }
           ]

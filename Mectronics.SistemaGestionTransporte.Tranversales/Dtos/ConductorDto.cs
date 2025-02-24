@@ -1,4 +1,6 @@
 ﻿
+using Mectronics.SistemaGestionTransporte.Tranversales.Entidades;
+
 namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
 {
     /// <summary>
@@ -25,5 +27,10 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         /// Usuario asociado al conductor.
         /// </summary>
         public UsuarioDto Usuario { get; set; }
+
+        /// <summary>
+        ///  Rol asociado al conductor.
+        /// </summary>
+        public RolDto Rol { get; set; }
     }
 }

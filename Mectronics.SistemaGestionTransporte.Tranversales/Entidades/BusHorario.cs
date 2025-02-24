@@ -14,6 +14,11 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         public Bus Bus { get; set; }
 
         /// <summary>
+        /// Estado asignado a este horario.
+        /// </summary>
+        public EstadoBus EstadoBus { get; set; }
+
+        /// <summary>
         /// Fecha del horario asignado.
         /// </summary>
         public DateTime Fecha { get; set; }
@@ -32,6 +37,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// Hora de salida del bus.
         /// </summary>
         public DateTime HoraSalida { get; set; }
+
 
         public BusHorario()
         {

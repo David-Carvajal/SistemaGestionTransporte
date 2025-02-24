@@ -11,13 +11,13 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// <summary>
         /// Descripción del estado del bus.
         /// </summary>
-        public string Estado { get; set; }
+        public string NombreEstadoBus { get; set; }
 
 
         public EstadoBus()
         {
             IdEstadoBus = 0;
-            Estado = string.Empty;
+            NombreEstadoBus = string.Empty;
         }
     }
 }

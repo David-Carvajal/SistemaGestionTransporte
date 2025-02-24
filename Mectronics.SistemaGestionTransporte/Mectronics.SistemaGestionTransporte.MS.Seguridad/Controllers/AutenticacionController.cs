@@ -6,7 +6,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.Seguridad.Controllers
 {/// <summary>
  /// Controlador para gestionar la autenticación de usuarios en la API.
  /// </summary>
-    [Route("api/ Autenticacion")] // Define la ruta base del controlador en la API
+    [Route("api/Autenticacion")] // Define la ruta base del controlador en la API
     [ApiController] // Indica que este controlador maneja respuestas automáticas de validación de modelos y serialización
     public class AutenticacionController : ControllerBase
     {
