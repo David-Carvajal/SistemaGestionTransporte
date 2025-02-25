@@ -3,18 +3,6 @@
     "Name": "Nuevo perfil",
     "Projects": [
       {
-        "Path": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj",
-        "Action": "Start"
-      },
-      {
-        "Path": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj",
-        "Action": "Start"
-      },
-      {
-        "Path": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Mectronics.SistemaGestionTransporte.Servicio.csproj",
-        "Action": "Start"
-      },
-      {
         "Path": "..\\Mectronics.SistemaGestionTransporte.MS.Rol\\Mectronics.SistemaGestionTransporte.MS.Rol.csproj",
         "Action": "Start"
       },
@@ -36,6 +24,18 @@
       },
       {
         "Path": "Mectronics.SistemaGestionTransporte.MS.EstadoBus\\Mectronics.SistemaGestionTransporte.MS.EstadoBus.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Mectronics.SistemaGestionTransporte.MS.EstadoConductor\\Mectronics.SistemaGestionTransporte.MS.EstadoConductor.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Mectronics.SistemaGestionTransporte.MS.Usuario\\Mectronics.SistemaGestionTransporte.MS.Usuario.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Mectronics.SistemaGestionTransporte.MS.Seguridad\\Mectronics.SistemaGestionTransporte.MS.Seguridad.csproj",
         "Action": "Start"
       }
     ]

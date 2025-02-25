@@ -9,7 +9,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.ConductorHorario.Controllers
     /// Controlador para la gestión de Horarios de conductores en la API.
     /// Proporciona operaciones para insertar, actualizar, eliminar y consultar listado de horarios de conductores.
     /// </summary>
-    [Route("api/Conductor Horario")]
+    [Route("api/ConductorHorario")]
     [ApiController]
     public class ConductorHorarioController : ControllerBase
     {

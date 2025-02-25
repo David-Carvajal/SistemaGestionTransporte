@@ -9,7 +9,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers
     /// Controlador para la gestión de estado conductores en la API.
     /// Proporciona operaciones de consultar estado de conductores.
     /// </summary>
-    [Route("api/Estado Conductor")]
+    [Route("api/EstadoConductor")]
     [ApiController]
     public class EstadoConductorController : ControllerBase
     {

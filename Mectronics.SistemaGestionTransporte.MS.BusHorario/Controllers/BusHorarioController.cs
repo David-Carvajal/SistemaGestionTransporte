@@ -10,7 +10,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.BusHorario.Controllers
     /// Proporciona operaciones para insertar, actualizar, eliminar y consultar horarios de buses.
     /// </summary>
     [ApiController]
-    [Route("api/Bus horario")]
+    [Route("api/BusHorario")]
     public class BusHorarioController : ControllerBase
     {
         /// <summary>
