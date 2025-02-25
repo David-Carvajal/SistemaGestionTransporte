@@ -13,6 +13,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IEstadoCon
         /// </summary>
         /// <param name="objFiltro">Objeto <see cref="EstadoConductorFiltro"/> con los criterios de búsqueda.</param>
         /// <returns>Registro encontrado.</returns>
-        EstadoConductorDto Consultar(EstadoConductorFiltro objFiltro);
+        List<EstadoConductorDto> ConsultarLista();
     }
 }

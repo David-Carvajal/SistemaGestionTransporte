@@ -14,7 +14,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IEstadoCon
         /// </summary>
         /// <param name="objFiltro">Objeto <see cref="EstadoConductorFiltro"/> con los criterios de búsqueda.</param>
         /// <returns>Una instancia de <see cref="EstadoConductor"/> si se encuentra, de lo contrario, <c>null</c>.</returns>
-        EstadoConductor Consultar(EstadoConductorFiltro objFiltro);
+        List<EstadoConductor> ConsultarLista();
 
     }
 }

@@ -37,13 +37,10 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
         /// </summary>
         /// <param name="idEstadoConductor">Identificador único del estado de conductor a consultar.</param>
         /// <returns>Objeto <see cref="EstadoConductorDto"/> con la información del estado de conductor consultado.</returns>
-        public EstadoConductorDto Consultar(EstadoConductorFiltro objFiltro)
+        public List<EstadoConductorDto> ConsultarLista()
         {
-            if (objFiltro.IdEstadoConductor <= 0)
-                throw new ArgumentException("El ID del estado de conductor es inválido.");
-
-            EstadoConductor estadoConductor = _repositorioEstadoConductor.Consultar(objFiltro);
-            return _mapeo.Map<EstadoConductorDto>(estadoConductor);
+            List <EstadoConductor> estado = _repositorioEstadoConductor.ConsultarLista();
+            return _mapeo.Map<List<EstadoConductorDto>>(estado);
         }
     }
 }

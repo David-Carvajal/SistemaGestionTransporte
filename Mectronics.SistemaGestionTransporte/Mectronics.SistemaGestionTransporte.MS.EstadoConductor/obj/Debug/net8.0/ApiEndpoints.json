@@ -1,18 +1,12 @@
 [
   {
     "ContainingType": "Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers.EstadoConductorController",
-    "Method": "Consultar",
-    "RelativePath": "api/EstadoConductor/{id}",
+    "Method": "ConsultarLista",
+    "RelativePath": "api/Estado Conductor",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "Mectronics.SistemaGestionTransporte.Tranversales.Dtos.EstadoConductorDto",

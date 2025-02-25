@@ -32,21 +32,19 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoConductor.Controllers
         /// </summary>
         /// <param name="id">Identificador único del estado del conductor a consultar.</param>
         /// <returns>Objeto <see cref="EstadoConductorDto"/> con la información del estado del conductor.</returns>
-        [HttpGet("{id}")]
-        public ActionResult<EstadoConductorDto> Consultar(int id)
+        [HttpGet]
+        public ActionResult<EstadoConductorDto> ConsultarLista()
         {
             try
             {
-
-                EstadoConductorFiltro filtro = new EstadoConductorFiltro { IdEstadoConductor = id };
-                EstadoConductorDto estadoConductorDto = _estadoConductorServicio.Consultar(filtro);
+                List<EstadoConductorDto> estadoConductorDto = _estadoConductorServicio.ConsultarLista();
 
                 if (estadoConductorDto == null)
                 {
-                    return NotFound(new RespuestaDto { Exito = false, Mensaje = "No se encontró el estado de conductor solicitado.", Datos = null });
+                    return Ok(new RespuestaDto { Exito = false, Mensaje = "No se encontró el estado de conductor solicitado.", Datos = null });
                 }
 
-                return Ok(new RespuestaDto { Exito = true, Mensaje = "Estado de conductor consultado exitosamente.", Datos = estadoConductorDto });
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Estado de conductor consultado exitosamente.", Datos =  estadoConductorDto});
             }
             catch (Exception ex)
             {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mectronics.SistemaGestionTransporte.Repositorio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+663393ae036709d38cefd855dc7e94e851eed460")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0bb9efa34b2de55c8d7c397dbf7d761b7a6da86")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mectronics.SistemaGestionTransporte.Repositorio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mectronics.SistemaGestionTransporte.Repositorio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
