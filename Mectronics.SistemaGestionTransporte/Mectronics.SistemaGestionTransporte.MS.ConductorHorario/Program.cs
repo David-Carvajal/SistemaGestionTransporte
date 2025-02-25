@@ -9,12 +9,17 @@ using Mectronics.SistemaGestionTransporte.Servicio.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 //configurar CORS
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
-        policy.AllowAnyOrigin()
-              .AllowAnyMethod()
-              .AllowAnyHeader());
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("*")
+                                .AllowAnyMethod()
+                                .AllowAnyHeader();
+                      });
 });
 // Agregar `IConfiguration` al contenedor de dependencias
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
@@ -67,6 +72,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.Run();
 

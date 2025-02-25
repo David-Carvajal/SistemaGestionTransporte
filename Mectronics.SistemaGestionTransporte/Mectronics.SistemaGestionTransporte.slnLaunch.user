@@ -1,6 +1,43 @@
 [
   {
     "Name": "Nuevo perfil",
-    "Projects": []
+    "Projects": [
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.Tranversales\\Mectronics.SistemaGestionTransporte.Tranversales.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.Repositorio\\Mectronics.SistemaGestionTransporte.Repositorio.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.Servicio\\Mectronics.SistemaGestionTransporte.Servicio.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.MS.Rol\\Mectronics.SistemaGestionTransporte.MS.Rol.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.MS.Bus\\Mectronics.SistemaGestionTransporte.MS.Bus.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.MS.BusHorario\\Mectronics.SistemaGestionTransporte.MS.BusHorario.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Mectronics.SistemaGestionTransporte.MS.Conductor\\Mectronics.SistemaGestionTransporte.MS.Conductor.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Mectronics.SistemaGestionTransporte.MS.ConductorHorario\\Mectronics.SistemaGestionTransporte.MS.ConductorHorario.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Mectronics.SistemaGestionTransporte.MS.EstadoBus\\Mectronics.SistemaGestionTransporte.MS.EstadoBus.csproj",
+        "Action": "Start"
+      }
+    ]
   }
 ]
