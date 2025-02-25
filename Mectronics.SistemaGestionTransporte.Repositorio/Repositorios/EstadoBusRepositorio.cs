@@ -29,19 +29,18 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// </summary>
         /// <param name="filtro">Objeto <see cref="EstadoBusFiltro"/> con los criterios de búsqueda.</param>
         /// <returns>Una instancia de <see cref="EstadoBus"/> si se encuentra, de lo contrario, <c>null</c>.</returns>        
-        public EstadoBus Consultar(EstadoBusFiltro filtro)
+        public List<EstadoBus> Consultar(EstadoBusFiltro filtro)
         {
-            EstadoBus estadoBus = null;
-            string consultaSql = "SELECT IdEstadoBus, NombreEstadoBus FROM EstadoBus WHERE IdEstadoBus = @IdEstadoBus";
+            List<EstadoBus> registros = null;
+            string consultaSql = "SELECT IdEstadoBus, NombreEstadoBus FROM EstadoBus";
 
             try
             {
                 _conexion.LimpiarParametros();
-                _conexion.AgregarParametroSql("@IdEstadoBus", filtro.IdEstadoBus, SqlDbType.Int);
-
+                
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
                 {
-                    estadoBus = EstadoBusMapeo.Mapear(resultado);
+                    registros = EstadoBusMapeo.MapearLista(resultado);
                 }
             }
             catch (Exception ex)
@@ -53,7 +52,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.Cerrar();
             }
 
-            return estadoBus;
+            return registros;
         }
     }
 }

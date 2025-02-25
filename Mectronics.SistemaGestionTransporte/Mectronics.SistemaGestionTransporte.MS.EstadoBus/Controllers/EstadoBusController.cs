@@ -9,7 +9,7 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers
     /// Controlador para la gestión de estado buses en la API.
     /// Proporciona operaciones de consultar estado de buses.
     /// </summary>
-    [Route("api/Estado Bus")]
+    [Route("api/EstadoBus")]
     [ApiController]
     public class EstadoBusController : ControllerBase
     {
@@ -32,20 +32,20 @@ namespace Mectronics.SistemaGestionTransporte.MS.EstadoBus.Controllers
         /// </summary>
         /// <param name="id">Identificador único del estado de bus a consultar.</param>
         /// <returns>Objeto <see cref="EstadoBusDto"/> con la información del estado de bus consultado.</returns>
-        [HttpGet("{id}")]
-        public ActionResult Consultar(int id)
+        [HttpGet]
+        public ActionResult Consultar()
         {
             try
             {
-                EstadoBusFiltro filtro = new EstadoBusFiltro { IdEstadoBus = id };
-                EstadoBusDto estadoBusDto = _estadoBusServicio.Consultar(filtro);
+                EstadoBusFiltro filtro = new EstadoBusFiltro ();
+                List<EstadoBusDto> estados = _estadoBusServicio.Consultar(filtro);
 
-                if (estadoBusDto == null)
+                if (estados == null)
                 {
-                    return NotFound(new RespuestaDto { Exito = false, Mensaje = "No se encontró el estado del bus.", Datos = null });
+                    return Ok(new RespuestaDto { Exito = false, Mensaje = "No se encontró información.", Datos = null });
                 }
 
-                return Ok(new RespuestaDto { Exito = true, Mensaje = "Registro consultado exitosamente.", Datos = estadoBusDto });
+                return Ok(new RespuestaDto { Exito = true, Mensaje = "Registro consultado exitosamente.", Datos = estados });
             }
             catch (Exception ex)
             {

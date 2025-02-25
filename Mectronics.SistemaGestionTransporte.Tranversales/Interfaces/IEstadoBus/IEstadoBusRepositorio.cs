@@ -14,7 +14,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IEstadoBus
         /// </summary>
         /// <param name="objFiltro">Objeto <see cref="EstadoBusFiltro"/> con los criterios de búsqueda.</param>
         /// <returns>Una instancia de <see cref="EstadoBus"/> si se encuentra, de lo contrario, <c>null</c>.</returns>
-        EstadoBus Consultar(EstadoBusFiltro objFiltro);
+        List<EstadoBus> Consultar(EstadoBusFiltro objFiltro);
 
     }
 }

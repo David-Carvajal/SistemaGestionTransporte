@@ -1,6 +1,8 @@
 const URL_API_AUTENTICACION = 'https://localhost:7152/api/Autenticacion'
 const URL_API_BUS = "https://localhost:7116/api/Bus"
 const URL_API_CONDUCTOR = "https://localhost:44306/api/Conductor"
+const URL_API_ESTADO_BUS = "https://localhost:7047/api/estadobus"
+
 function configurarMenu()
 {
     var idRolUsuario = obtenerIdRol();
@@ -36,4 +38,14 @@ function mostrarError(mensaje){
         btnColor: '#ff8f4d',
         border:true
       });
+}
+
+function cerrarModal(nombremodal) {
+
+    var modalElement = document.getElementById(nombremodal);
+    var modalInstance = bootstrap.Modal.getInstance(modalElement); // Obtener la instancia del modal
+
+    if (modalInstance) {
+        modalInstance.hide(); // Cierra la modal
+    }
 }

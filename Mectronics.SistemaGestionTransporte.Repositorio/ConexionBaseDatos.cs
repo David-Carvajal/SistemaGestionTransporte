@@ -16,6 +16,10 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio
     /// </summary>
     public class ConexionBaseDatos : IConexionBaseDatos
     {
+        /// <summary>
+        /// Cadena de conexion.
+        /// </summary>
+        private string _cadenaConexion { get; set; }
 
         /// <summary>
         /// Representa el comando SQL asociado a la conexión.
@@ -38,10 +42,9 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio
             if (configuration == null)
                 throw new Exception("No existe un archivo de configuración.");
 
-            string cadenaConexion = configuration.GetConnectionString("SistemaGestionTransporte");
-            Conexion = new SqlConnection(cadenaConexion);
-            Comando = Conexion.CreateCommand();
-            Comando.Connection = Conexion;
+            _cadenaConexion = configuration.GetConnectionString("SistemaGestionTransporte");
+            
+            Conexion = new SqlConnection(_cadenaConexion);            
         }
 
         /// <summary>
@@ -51,6 +54,10 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio
         {
             if (Conexion.State != ConnectionState.Open)
             {
+                Conexion = new SqlConnection(_cadenaConexion);
+                Comando = Conexion.CreateCommand();
+                Comando.Connection = Conexion;
+
                 Conexion.Open();
             }
         }
@@ -144,6 +151,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio
         /// </summary>
         public void LimpiarParametros()
         {
+            AbrirConexion();
             Comando?.Parameters.Clear();
         }
 

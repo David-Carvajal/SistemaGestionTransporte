@@ -33,13 +33,10 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
             _mapeo = mapeo;
         }
 
-        public EstadoBusDto Consultar(EstadoBusFiltro objFiltro)
+        public List<EstadoBusDto> Consultar(EstadoBusFiltro objFiltro)
         {
-            if (objFiltro.IdEstadoBus <= 0)
-                throw new ArgumentException("El ID del estado de bus es inválido.");
-
-            EstadoBus estadoBus = _repositorioEstadoBus.Consultar(objFiltro);
-            return _mapeo.Map<EstadoBusDto>(estadoBus);
+            List<EstadoBus> estados = _repositorioEstadoBus.Consultar(objFiltro);
+            return _mapeo.Map<List<EstadoBusDto>>(estados);
         }
     }
 }
