@@ -32,10 +32,11 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public Conductor Consultar(ConductorFiltro objFiltro)
         {
             Conductor conductor = null;
-            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IdEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol As Rol " +
-                "FROM Conductores c INNER JOIN Usuarios u ON c.IdUsuario = u.IdUsuario " +
-                "WHERE c.IdConductor = @IdConductor";
-
+            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IdEstadoConductor, e.NombreEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol, r.NombreRol " +
+                                "FROM Conductores c INNER JOIN Usuarios u ON c.IdUsuario = u.IdUsuario " +
+                                "INNER JOIN EstadoConductor e ON c.IdEstadoConductor = e.IdEstadoConductor " +
+                                "INNER JOIN Roles r ON u.IdRol = r.IdRol " +
+                                "WHERE r.NombreRol = 'Conductor' AND c.IdConductor = @IdConductor";
             try
             {
                 _conexion.LimpiarParametros();
@@ -66,9 +67,11 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<Conductor> ConsultarListado(ConductorFiltro objFiltro)
         {
             List<Conductor> conductores = [];
-            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IdEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol As Rol " +
-                                 "FROM Conductores c INNER JOIN Usuarios u ON c.IdUsuario = u.IdUsuario " +
-                                 "WHERE c.NumeroLicencia like @NumeroLicencia";
+            string consultaSql = "SELECT c.IdConductor, c.NumeroLicencia, c.IdEstadoConductor, e.NombreEstadoConductor, c.IdUsuario,  u.Nombre As Nombre, u.Correo As Correo, u.IdRol, r.NombreRol " +
+                                "FROM Conductores c INNER JOIN Usuarios u ON c.IdUsuario = u.IdUsuario " +
+                                "INNER JOIN EstadoConductor e ON c.IdEstadoConductor = e.IdEstadoConductor " +
+                                "INNER JOIN Roles r ON u.IdRol = r.IdRol " +
+                                "WHERE r.NombreRol = 'Conductor' AND c.NumeroLicencia like @NumeroLicencia";
 
             if (objFiltro.IdEstadoConductor > 0)
             {
@@ -171,7 +174,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         /// <returns>El número de filas afectadas en la base de datos.</returns>
         public int Actualizar(Conductor conductor)
         {
-            string strComandoSql = "UPDATE Conductores SET NumeroLicencia = @NumeroLicencia, IdEstadoConductor = @IdEstadoConductor, IdUsuario = @IdUsuario WHERE IdConductor = @IdConductor";
+            string strComandoSql = "UPDATE Conductores SET NumeroLicencia = @NumeroLicencia, IdEstadoConductor = @IdEstadoConductor WHERE IdConductor = @IdConductor";
             int filasAfectadas = 0;
 
             try
@@ -179,8 +182,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@IdConductor", conductor.IdConductor, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@NumeroLicencia", conductor.NumeroLicencia, SqlDbType.VarChar);
-                _conexion.AgregarParametroSql("@IdEstadoConductor", conductor.EstadoConductor.IdEstadoConductor, SqlDbType.Int);
-                _conexion.AgregarParametroSql("@IdUsuario", conductor.Usuario.IdUsuario, SqlDbType.Int);
+                _conexion.AgregarParametroSql("@IdEstadoConductor", conductor.EstadoConductor.IdEstadoConductor, SqlDbType.Int);                
 
                 filasAfectadas = _conexion.EjecutarComandoSql(strComandoSql);
             }

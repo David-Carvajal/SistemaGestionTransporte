@@ -23,10 +23,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// </summary>
         public Usuario Usuario { get; set; }
 
-        /// <summary>
-        /// Rol asociado al conductor.
-        /// </summary>
-        public Rol Rol { get; set; }
         public Conductor()
         {
             IdConductor = 0;

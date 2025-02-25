@@ -3,6 +3,7 @@ using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
 using Mectronics.SistemaGestionTransporte.Tranversales.Entidades;
 using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IConductor;
+using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IUsuario;
 
 namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
 {
@@ -16,6 +17,8 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
         /// </summary>
         private readonly IConductorRepositorio _repositorioConductor;
 
+        private readonly IUsuarioRepositorio _repositorioUsuario;
+
         /// <summary>
         /// Instancia de AutoMapper para realizar conversiones entre entidades y DTOs.
         /// </summary>
@@ -26,9 +29,10 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
         /// </summary>
         /// <param name="repositorioConductor">Instancia del repositorio de conductores.</param>
         /// <param name="mapeo">Instancia de AutoMapper para mapeo de entidades a DTOs.</param>
-        public ConductorServicio(IConductorRepositorio repositorioConductor, IMapper mapeo)
+        public ConductorServicio(IConductorRepositorio repositorioConductor, IUsuarioRepositorio repositorioUsuario, IMapper mapeo)
         {
             _repositorioConductor = repositorioConductor;
+            _repositorioUsuario = repositorioUsuario;
             _mapeo = mapeo;
         }
 
@@ -40,6 +44,9 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
         public ConductorDto Insertar(ConductorDto conductorDto)
         {
             Conductor conductor = _mapeo.Map<Conductor>(conductorDto);
+
+            // Insertar el Usuario
+            conductor.Usuario.IdUsuario = _repositorioUsuario.Insertar(conductor.Usuario);
 
             ValidarDatos(conductor);
 
@@ -62,9 +69,11 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
 
             ValidarDatos(conductor);
 
+            int actualizoUsuario = _repositorioUsuario.Actualizar(conductor.Usuario);
+
             int actualizo = _repositorioConductor.Actualizar(conductor);
 
-            if (actualizo <= 0)
+            if (actualizo <= 0 || actualizoUsuario <= 0)
                 throw new ArgumentException("El registro no se actualizó.");
 
             return conductorDto;
@@ -127,10 +136,7 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
             if (string.IsNullOrWhiteSpace(conductor.NumeroLicencia))
                 throw new ArgumentException("El número de licencia no puede estar vacío.");
 
-            //if (conductor.EstadoConductor == null || conductor.EstadoConductor.IdEstadoConductor <= 0)
-            //    throw new ArgumentException("El estado del conductor es inválido.");
-
-            if (conductor.Usuario == null || conductor.Usuario.IdUsuario <= 0)
+            if (conductor.Usuario == null)
                 throw new ArgumentException("El usuario asociado es inválido.");
         }
     }

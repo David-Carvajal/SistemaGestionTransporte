@@ -3,6 +3,7 @@ using Mectronics.SistemaGestionTransporte.Repositorio.Repositorios;
 using Mectronics.SistemaGestionTransporte.Servicio.Servicios;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IConductor;
+using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IUsuario;
 using Mectronics.SistemaGestionTransporte.Tranversales.Mapeos.AutoMapper;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -30,6 +31,7 @@ builder.Services.AddAutoMapper(typeof(AutoMapeador));
 //Inyeccion de Dependencias
 builder.Services.AddScoped<IConexionBaseDatos, ConexionBaseDatos>();
 builder.Services.AddScoped<IConductorServicio, ConductorServicio>();
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddScoped<IConductorRepositorio, ConductorRepositorio>();
 
 // Agregar controladores

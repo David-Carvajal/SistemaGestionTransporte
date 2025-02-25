@@ -40,7 +40,6 @@ function cargarEstadoBuses() {
         });
 }
 
-
 function cargaTablaBuses() {
     fetch(URL_API_BUS, {
         method: "GET",
@@ -142,15 +141,6 @@ function guardarBus() {
         registroBus.idBus = idBus;
     }
 
-    const nuevoBus = {
-        modelo: modelo,
-        capacidad: parseInt(capacidad),
-        placa: placa,
-        estadoBus: {
-            idEstadoBus: idEstado
-        }
-    };
-
     fetch(URL_API_BUS, {
         method: metodo,
         headers: {
@@ -167,8 +157,7 @@ function guardarBus() {
                 document.getElementById("idBus").value = "";
                 cargaTablaBuses();
             }
-            else {
-                cerrarModal('modalGuardarBus');
+            else {                
                 mostrarError(resultado.mensaje);
             }
         })

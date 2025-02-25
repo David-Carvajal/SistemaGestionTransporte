@@ -61,50 +61,59 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
                         <th scope="col">Licencia</th>
-                        <th scope="col">Id Estado Conductor</th>
                         <th scope="col">Estado</th>
-                        <th scope="col">Id Usuario</th>
+                        <th scope="col">Opciones</th>
                     </tr>
                 </thead>
-                <tbody id = "tablaConductores"> </tbody>
+                <tbody id="tablaConductores"> </tbody>
             </table>
+
             <!-- Botón para abrir modal de nuevo bus -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#modalRegistroConductor" onclick="nuevo()">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGuardarConductor">
                 Nuevo
             </button>
 
+
             <!-- Modal para registrar o editar bus -->
-            <div class="modal fade" id="modalRegistroConductor" tabindex="-1"
-                aria-labelledby="modalRegistroConductorTitulo" aria-hidden="true">
+            <div class="modal fade" id="modalGuardarConductor" tabindex="-1"
+                aria-labelledby="modalGuardarConductorTitulo" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="modalRegistroConductorTitulo">Guardar Conductor</h1>
+                            <h1 class="modal-title fs-5" id="modalGuardarConductorTitulo">Guardar Conductor</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form id="registroConductorForm">
+                            <form id="formularioGuardarConductor">
                                 <input type="hidden" id="idConductor">
+                                <input type="hidden" id="idUsuario">
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="numeroLicencia" required>
+                                    <input type="text" class="form-control" id="nombreCompleto" required>
+                                    <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="correo" required>
+                                    <label for="correo" class="form-label">Correo</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="numeroLicencia" required>
                                     <label for="numeroLicencia" class="form-label">Número de Licencia</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="contrasena" required>
+                                    <label for="contrasena" class="form-label">Contraseña</label>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="estadoConductor" class="form-label">Estado del Conductor</label>
-                                    <select class="form-select" id="estadoConductor" required>
-                                        <option value="Activo">Activo</option>
-                                        <option value="Inactivo">Inactivo</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="usuario" class="form-label">Usuario</label>
-                                    <select class="form-select" id="usuario" required>
-                                        <!-- Opciones de usuario se cargarán dinámicamente -->
+                                    <select class="form-select" id="estadoConductor" required>                                        
                                     </select>
                                 </div>
 
@@ -122,14 +131,15 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="../Scripts/GestionConductores.js"></script>
     <script src="../Scripts/Sesion.js"></script>
     <script src="../Scripts/Configuracion.js"></script>
-
-    </script>
+    <script src="../Scripts/Encriptar.js"></script>
+    
 </body>
 
 </html>

@@ -1,7 +1,8 @@
-const URL_API_AUTENTICACION = 'https://localhost:7152/api/Autenticacion'
-const URL_API_BUS = "https://localhost:7116/api/Bus"
-const URL_API_CONDUCTOR = "https://localhost:44306/api/Conductor"
+const URL_API_AUTENTICACION = 'https://localhost:7152/api/autenticacion'
+const URL_API_BUS = "https://localhost:7116/api/bus"
+const URL_API_CONDUCTOR = "https://localhost:7293/api/conductor"
 const URL_API_ESTADO_BUS = "https://localhost:7047/api/estadobus"
+const URL_API_ESTADO_CONDUCTORES = "https://localhost:7021/api/estadoconductor"
 
 function configurarMenu()
 {

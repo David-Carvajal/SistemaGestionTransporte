@@ -21,16 +21,11 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         /// <summary>
         /// Estado actual del conductor (disponible, en descanso, etc.).
         /// </summary>
-        public EstadoConductorDto NombreEstadoConductor { get; set; }
+        public EstadoConductorDto EstadoConductor { get; set; }
 
         /// <summary>
         /// Usuario asociado al conductor.
         /// </summary>
         public UsuarioDto Usuario { get; set; }
-
-        /// <summary>
-        ///  Rol asociado al conductor.
-        /// </summary>
-        public RolDto Rol { get; set; }
     }
 }
