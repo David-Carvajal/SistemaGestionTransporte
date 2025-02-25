@@ -167,7 +167,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         ///<param name="usuario">Objeto<see cref="Usuario"/> con la informacion actualizada.</param>
         public int Actualizar(Usuario usuario)
         {
-            string strComandoSql = "UPDATE Usuarios SET Nombre = @Nombre, Correo = @Correo, Contrasena = @Contrasena, IdRol = @IdRol WHERE IdUsuario = @IdUsuario";
+            string strComandoSql = "UPDATE Usuarios SET Nombre = @Nombre, Correo = @Correo, IdRol = @IdRol WHERE IdUsuario = @IdUsuario";
             int filasAfectadas = 0;
 
             try
@@ -175,8 +175,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@IdUsuario", usuario.IdUsuario, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@Nombre", usuario.Nombre, SqlDbType.VarChar);
-                _conexion.AgregarParametroSql("@Correo", usuario.Correo, SqlDbType.VarChar);
-                _conexion.AgregarParametroSql("@Contrasena", usuario.Contrasena, SqlDbType.VarChar);
+                _conexion.AgregarParametroSql("@Correo", usuario.Correo, SqlDbType.VarChar);                
                 _conexion.AgregarParametroSql("@IdRol", usuario.Rol.IdRol, SqlDbType.Int);
 
                 filasAfectadas = _conexion.EjecutarComandoSql(strComandoSql);

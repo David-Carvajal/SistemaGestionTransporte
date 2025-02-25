@@ -3,6 +3,7 @@ using Mectronics.SistemaGestionTransporte.Repositorio.Repositorios;
 using Mectronics.SistemaGestionTransporte.Servicio.Servicios;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorario;
+using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IConductorHorario;
 using Mectronics.SistemaGestionTransporte.Tranversales.Mapeos.AutoMapper;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -29,6 +30,7 @@ builder.Services.AddAutoMapper(typeof(AutoMapeador));
 
 //Inyeccion de Dependencias
 builder.Services.AddScoped<IConexionBaseDatos, ConexionBaseDatos>();
+builder.Services.AddScoped<IConductorHorarioRepositorio, ConductorHorarioRepositorio>();
 builder.Services.AddScoped<IBusHorarioServicio, BusHorarioServicio>();
 builder.Services.AddScoped<IBusHorarioRepositorio, BusHorarioRepositorio>();
 

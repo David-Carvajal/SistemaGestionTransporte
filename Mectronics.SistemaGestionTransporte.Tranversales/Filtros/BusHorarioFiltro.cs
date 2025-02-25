@@ -22,6 +22,11 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
         public string DiaSemana { get; set; }
 
         /// <summary>
+        /// Texto cualquiera para filtrar por el nombre del conducto o placa.
+        /// </summary>
+        public string FiltroLike { get; set; }
+
+        /// <summary>
         /// Constructor de la clase <see cref="BusHorarioFiltro"/>.
         /// Inicializa una nueva instancia con valores predeterminados.
         /// </summary>
@@ -30,6 +35,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Filtros
             IdBusHorario = 0;
             Fecha = DateTime.MinValue;
             DiaSemana = string.Empty;
+            FiltroLike = string.Empty;
         }
     }
 }

@@ -46,9 +46,8 @@ function cargaTablaConductores() {
         .then(resultado => {
 
             let conductorArray = Array.isArray(resultado) ? resultado : resultado.datos;
-            modalGuardarConductor
-            if (!conductorArray || !Array.isArray(conductorArray)) {
-                console.error("No se recibió un array de Conductores.");
+            
+            if (!conductorArray || !Array.isArray(conductorArray)) {                
                 return;
             }
 

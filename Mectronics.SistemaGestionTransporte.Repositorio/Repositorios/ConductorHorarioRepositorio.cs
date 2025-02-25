@@ -29,27 +29,23 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<ConductorHorario> ConsultarListado(ConductorHorarioFiltro objFiltro)
         {
             List<ConductorHorario> horarios = new List<ConductorHorario>();
-            string consultaSql = "SELECT * FROM ConductorHorario ";
+            string consultaSql = "SELECT IdConductorHorario, IdConductor, Fecha, DiaSemana, HoraEntrada, HoraSalida, IdBus FROM ConductorHorario WHERE 1 = 1 ";
 
             if (objFiltro.IdConductorHorario != 0)
             {
-                consultaSql += "WHERE IdBusHorario = @IdBusHorario ";
+                consultaSql += " AND IdConductor = @IdConductor ";
             }
             if (objFiltro.Fecha != DateTime.MinValue)
             {
                 consultaSql += "AND Fecha = @Fecha ";
             }
-            if (!string.IsNullOrEmpty(objFiltro.DiaSemana))
-            {
-                consultaSql += "AND DiaSemana = @DiaSemana";
-            }
+            
             try
             {
                 _conexion.LimpiarParametros();
-                _conexion.AgregarParametroSql("@IdConductorHorario", objFiltro.IdConductorHorario, SqlDbType.Int);
+                _conexion.AgregarParametroSql("@IdConductor", objFiltro.IdConductorHorario, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@Fecha", objFiltro.Fecha, SqlDbType.Date);
-                _conexion.AgregarParametroSql("@DiaSemana", objFiltro.DiaSemana, SqlDbType.NVarChar);
-
+                
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
                 {
                     horarios = ConductorHorarioMapeo.MapearLista(resultado);
@@ -111,7 +107,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@IdConductor", conductorHorario.Conductor.IdConductor, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@Fecha", conductorHorario.Fecha, SqlDbType.DateTime);
-                _conexion.AgregarParametroSql("@DiaSemana", conductorHorario.DiaSemana, SqlDbType.VarChar);
+                _conexion.AgregarParametroSql("@DiaSemana", string.Empty, SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@HoraEntrada", conductorHorario.HoraEntrada, SqlDbType.DateTime);
                 _conexion.AgregarParametroSql("@HoraSalida", conductorHorario.HoraSalida, SqlDbType.DateTime);
                 _conexion.AgregarParametroSql("@IdBus", conductorHorario.Bus.IdBus, SqlDbType.Int);

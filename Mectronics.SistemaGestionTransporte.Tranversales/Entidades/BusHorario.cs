@@ -14,11 +14,6 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         public Bus Bus { get; set; }
 
         /// <summary>
-        /// Estado asignado a este horario.
-        /// </summary>
-        public EstadoBus EstadoBus { get; set; }
-
-        /// <summary>
         /// Fecha del horario asignado.
         /// </summary>
         public DateTime Fecha { get; set; }
@@ -38,6 +33,10 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
         /// </summary>
         public DateTime HoraSalida { get; set; }
 
+        /// <summary>
+        /// Nombre del conductor.
+        /// </summary>
+        public string NombreConductor { get; set; }
 
         public BusHorario()
         {
@@ -47,7 +46,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Entidades
             DiaSemana = string.Empty;
             HoraEntrada = DateTime.MinValue;
             HoraSalida = DateTime.MinValue;
+            NombreConductor = string.Empty;
         }
-
     }
 }

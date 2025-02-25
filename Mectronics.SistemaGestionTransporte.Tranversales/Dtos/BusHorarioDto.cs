@@ -24,23 +24,36 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Dtos
         /// <summary>
         /// Hora de entrada del bus.
         /// </summary>
-        public DateTime HoraEntrada { get; set; }
+        public DateTime? HoraEntrada { get; set; }
 
         /// <summary>
         /// Hora de salida del bus.
         /// </summary>
-        public DateTime HoraSalida { get; set; }
+        public DateTime? HoraSalida { get; set; }
+
+        /// <summary>
+        /// Hora de entrada del bus.
+        /// </summary>
+        public string HoraEntradaTexto { get; set; }
+
+        /// <summary>
+        /// Hora de salida del bus.
+        /// </summary>
+        public string HoraSalidaTexto { get; set; }
+
+        /// <summary>
+        /// Identificador único del conductor.
+        /// </summary>
+        public int IdConductor { get; set; }
+
+        /// <summary>
+        /// Nombre del conductor.
+        /// </summary>
+        public string NombreConductor { get; set; }
 
         /// <summary>
         /// Bus asignado a este horario.
         /// </summary>
-        public BusDto Bus { get; set; }
-        
-        /// <summary>
-        /// Bus asignado a este horario.
-        /// </summary>
-        public EstadoBusDto Estado  { get; set; }
-
-
+        public BusDto Bus { get; set; }        
     }
 }

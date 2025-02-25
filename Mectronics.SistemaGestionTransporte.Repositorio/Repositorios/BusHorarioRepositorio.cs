@@ -31,27 +31,34 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
         public List<BusHorario> ConsultarListado(BusHorarioFiltro objFiltro)
         {
             List<BusHorario> horarios = new List<BusHorario>();
-            string consultaSql = "SELECT h.IdBusHorario, h.Fecha,h.DiaSemana, h.HoraEntrada, h.HoraSalida, b.IdBus, b.Placa,  b.Capacidad, b.Modelo, eb.IdEstadoBus, eb.NombreEstadoBus " +
-                "FROM BusHorario h JOIN Buses b ON h.IdBus = b.IdBus JOIN EstadoBus eb ON b.IdEstadoBus = eb.IdEstadoBus";
+            string consultaSql = "SELECT h.IdBusHorario, h.Fecha,h.DiaSemana, h.HoraEntrada, h.HoraSalida, b.IdBus, b.Placa,  b.Capacidad, b.Modelo, eb.IdEstadoBus, eb.NombreEstadoBus, u.Nombre AS NombreConductor  " +
+                "FROM BusHorario h INNER JOIN Buses b ON h.IdBus = b.IdBus INNER JOIN EstadoBus eb ON b.IdEstadoBus = eb.IdEstadoBus " +
+                "LEFT JOIN ConductorHorario ch ON ch.IdBus = h.IdBus " +
+                "LEFT JOIN Conductores c ON ch.IdConductor = c.IdConductor " +
+                "LEFT JOIN Usuarios u ON u.IdUsuario = c.IdUsuario WHERE 1 = 1";
 
-            if (objFiltro.IdBusHorario !=0)
+            if (objFiltro.IdBusHorario > 0)
             {
-                consultaSql += "WHERE IdBusHorario = @IdBusHorario ";
+                consultaSql += " AND b.IdBus = @IdBus ";
             }
             if (objFiltro.Fecha != DateTime.MinValue)
             {
-                consultaSql += "AND Fecha = @Fecha ";
+                consultaSql += " AND h.Fecha = @Fecha ";
             }
-            if (!string.IsNullOrEmpty(objFiltro.DiaSemana))
+
+            if (!string.IsNullOrWhiteSpace(objFiltro.FiltroLike))
             {
-                consultaSql += "AND DiaSemana = @DiaSemana";
+                consultaSql += " AND (b.Placa LIKE @FiltroLike OR u.Nombre LIKE @FiltroLike)";
             }
+            else
+                objFiltro.FiltroLike = string.Empty;            
+
             try
             {
                 _conexion.LimpiarParametros();
-                _conexion.AgregarParametroSql("@IdBusHorario", objFiltro.IdBusHorario, SqlDbType.Int);
+                _conexion.AgregarParametroSql("@IdBus", objFiltro.IdBusHorario, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@Fecha", objFiltro.Fecha, SqlDbType.Date);
-                _conexion.AgregarParametroSql("@DiaSemana", objFiltro.DiaSemana, SqlDbType.NVarChar);
+                _conexion.AgregarParametroSql("@FiltroLike", $"%{objFiltro.FiltroLike}%", SqlDbType.VarChar);
 
                 using (IDataReader resultado = _conexion.EjecutarConsultaSql(consultaSql))
                 {
@@ -115,7 +122,7 @@ namespace Mectronics.SistemaGestionTransporte.Repositorio.Repositorios
                 _conexion.LimpiarParametros();
                 _conexion.AgregarParametroSql("@IdBus", busHorario.Bus.IdBus, SqlDbType.Int);
                 _conexion.AgregarParametroSql("@Fecha", busHorario.Fecha, SqlDbType.DateTime);
-                _conexion.AgregarParametroSql("@DiaSemana", busHorario.DiaSemana, SqlDbType.VarChar);
+                _conexion.AgregarParametroSql("@DiaSemana", "", SqlDbType.VarChar);
                 _conexion.AgregarParametroSql("@HoraEntrada", busHorario.HoraEntrada, SqlDbType.DateTime);
                 _conexion.AgregarParametroSql("@HoraSalida", busHorario.HoraSalida, SqlDbType.DateTime);
 

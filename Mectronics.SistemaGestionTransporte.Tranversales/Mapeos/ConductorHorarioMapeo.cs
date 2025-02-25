@@ -50,30 +50,24 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
         /// <returns>Una lista de <see cref="ConductorHorario"/>.</returns>
         public static List<ConductorHorario> MapearLista(IDataReader lector)
         {
-            var horarios = new List<ConductorHorario>(); // Lista vacía para almacenar los horarios
+            var horarios = new List<ConductorHorario>();
 
             if (lector == null)
-                return horarios; // Si no hay datos, devuelve una lista vacía
+                return horarios;
 
-            while (lector.Read()) // Mientras haya filas por leer...
+            while (lector.Read()) 
             {
                 horarios.Add(new ConductorHorario
                 {
                     IdConductorHorario = lector.GetInt32(0),
-
                     Conductor = new Conductor
                     {
                         IdConductor = lector.GetInt32(1)
                     },
-
                     Fecha = lector.GetDateTime(2),
-
                     DiaSemana = lector.GetString(3),
-
                     HoraEntrada = lector.GetDateTime(4),
-
                     HoraSalida = lector.GetDateTime(5),
-
                     Bus = new Bus
                     {
                         IdBus = lector.GetInt32(6)
@@ -81,7 +75,7 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
                 });
             }
 
-            return horarios; // Devuelve la lista de horarios
+            return horarios;
         }
     }
 }

@@ -21,29 +21,23 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
 
             return new BusHorario
             {
-                IdBusHorario = lector.GetInt32(0),  
-
+                IdBusHorario = lector.GetInt32(0),
+                Fecha = lector.GetDateTime(1),
+                DiaSemana = lector.GetString(2),
+                HoraEntrada = lector.GetDateTime(3),
+                HoraSalida = lector.GetDateTime(4),
                 Bus = new Bus
                 {
-                    IdBus = lector.GetInt32(1),
-                    Placa = lector.GetString(2),
-                    Capacidad = lector.GetInt32(3),
-                    Modelo = lector.GetString(4),
-                },
-
-                EstadoBus = new EstadoBus 
-                {
-                    IdEstadoBus = lector.GetInt32(5),
-                    NombreEstadoBus = lector.GetString(6)
-                },
-
-                Fecha = lector.GetDateTime(7),  
-
-                DiaSemana = lector.GetString(8), 
-
-                HoraEntrada = lector.GetDateTime(9),  
-
-                HoraSalida = lector.GetDateTime(10)   
+                    IdBus = lector.GetInt32(5),
+                    Placa = lector.GetString(6),
+                    Capacidad = lector.GetInt32(7),
+                    Modelo = lector.GetString(8),
+                    EstadoBus = new EstadoBus
+                    {
+                        IdEstadoBus = lector.GetInt32(9),
+                        NombreEstadoBus = lector.GetString(10)
+                    }
+                }
             };
         }
 
@@ -54,43 +48,37 @@ namespace Mectronics.SistemaGestionTransporte.Tranversales.Mapeos
         /// <returns>Una lista de <see cref="BusHorario"/>.</returns>
         public static List<BusHorario> MapearLista(IDataReader lector)
         {
-            var horarios = new List<BusHorario>();   // Lista vacía para almacenar los horarios de los buses
+            var horarios = new List<BusHorario>();
 
             if (lector == null)
-                return horarios;   // Si no hay datos, devuelve una lista vacía
+                return horarios;
 
-            while (lector.Read())   // Mientras haya filas por leer...
+            while (lector.Read())
             {
                 horarios.Add(new BusHorario
                 {
                     IdBusHorario = lector.GetInt32(0),
                     Fecha = lector.GetDateTime(1),
-
                     DiaSemana = lector.GetString(2),
-
                     HoraEntrada = lector.GetDateTime(3),
-
                     HoraSalida = lector.GetDateTime(4),
-
                     Bus = new Bus
                     {
                         IdBus = lector.GetInt32(5),
                         Placa = lector.GetString(6),
                         Capacidad = lector.GetInt32(7),
                         Modelo = lector.GetString(8),
+                        EstadoBus = new EstadoBus
+                        {
+                            IdEstadoBus = lector.GetInt32(9),
+                            NombreEstadoBus = lector.GetString(10)
+                        }
                     },
-
-                    EstadoBus = new EstadoBus
-                    {
-                        IdEstadoBus = lector.GetInt32(9),
-                        NombreEstadoBus = lector.GetString(10)
-                    },
-
-                    
+                    NombreConductor = lector.GetString(11),
                 });
             }
 
-            return horarios;  // Devuelve la lista de horarios de los buses
+            return horarios;
         }
     }
 }

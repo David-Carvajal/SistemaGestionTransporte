@@ -114,8 +114,6 @@ function cargarBus(idBus) {
 
 function guardarBus() {
 
-    debugger;
-
     let idBus = document.getElementById("idBus").value;
     var metodo = 'POST';
 

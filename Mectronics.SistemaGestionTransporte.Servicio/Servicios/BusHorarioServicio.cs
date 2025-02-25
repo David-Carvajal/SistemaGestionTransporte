@@ -3,6 +3,7 @@ using Mectronics.SistemaGestionTransporte.Tranversales.Dtos;
 using Mectronics.SistemaGestionTransporte.Tranversales.Entidades;
 using Mectronics.SistemaGestionTransporte.Tranversales.Filtros;
 using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IBusHorario;
+using Mectronics.SistemaGestionTransporte.Tranversales.Interfaces.IConductorHorario;
 
 namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
 {
@@ -16,6 +17,8 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
         /// </summary>
         private readonly IBusHorarioRepositorio _repositorioBusHorario;
 
+        private readonly IConductorHorarioRepositorio _repositorioConductorHorario;
+
         /// <summary>
         /// Instancia de AutoMapper para realizar conversiones entre entidades y DTOs.
         /// </summary>
@@ -26,9 +29,10 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
         /// </summary>
         /// <param name="repositorioBusHorario">Instancia del repositorio de horarios de buses.</param>
         /// <param name="mapeo">Instancia de AutoMapper para mapeo de entidades a DTOs.</param>
-        public BusHorarioServicio(IBusHorarioRepositorio repositorioBusHorario, IMapper mapeo)
+        public BusHorarioServicio(IBusHorarioRepositorio repositorioBusHorario, IConductorHorarioRepositorio repositorioConductorHorario, IMapper mapeo)
         {
             _repositorioBusHorario = repositorioBusHorario;
+            _repositorioConductorHorario = repositorioConductorHorario;
             _mapeo = mapeo;
         }
 
@@ -39,11 +43,41 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
         /// <returns>Información del registro creado.</returns>
         public BusHorarioDto Insertar(BusHorarioDto busHorarioDto)
         {
+            busHorarioDto.HoraEntrada = busHorarioDto.Fecha;
+            busHorarioDto.HoraEntrada = busHorarioDto.HoraEntrada.Value.AddHours(Convert.ToInt16(busHorarioDto.HoraEntradaTexto.Split(':')[0]));
+            busHorarioDto.HoraEntrada = busHorarioDto.HoraEntrada.Value.AddMinutes(Convert.ToInt16(busHorarioDto.HoraEntradaTexto.Split(':')[1]));
+
+            busHorarioDto.HoraSalida = busHorarioDto.Fecha;
+            busHorarioDto.HoraSalida = busHorarioDto.HoraSalida.Value.AddHours(Convert.ToInt16(busHorarioDto.HoraSalidaTexto.Split(':')[0]));
+            busHorarioDto.HoraSalida = busHorarioDto.HoraSalida.Value.AddMinutes(Convert.ToInt16(busHorarioDto.HoraSalidaTexto.Split(':')[1]));
+
             BusHorario busHorario = _mapeo.Map<BusHorario>(busHorarioDto);
 
             ValidarDatos(busHorario);
 
-            busHorarioDto.IdBusHorario = _repositorioBusHorario.Insertar(busHorario);
+            List<BusHorario> horariosBus = _repositorioBusHorario.ConsultarListado(new BusHorarioFiltro() { IdBusHorario = busHorarioDto.Bus.IdBus, Fecha = busHorarioDto.Fecha });
+
+            if (horariosBus.Count > 0)
+                throw new ArgumentException($"Este bus ya tiene un horario asignado para el dia {busHorarioDto.Fecha.ToShortDateString()}.");
+            
+            ConductorHorario conductorHorario = new ConductorHorario();
+            conductorHorario.Bus.IdBus = busHorarioDto.Bus.IdBus;
+            conductorHorario.Fecha = busHorarioDto.Fecha;
+            conductorHorario.HoraEntrada = busHorarioDto.HoraEntrada.Value;
+            conductorHorario.HoraSalida = busHorarioDto.HoraSalida.Value;
+            conductorHorario.Conductor.IdConductor = busHorarioDto.IdConductor;
+
+            List<ConductorHorario> horariosConductor = _repositorioConductorHorario.ConsultarListado(new ConductorHorarioFiltro() { IdConductorHorario = conductorHorario.Conductor.IdConductor, Fecha = conductorHorario.Fecha });
+            
+            if (horariosConductor.Count > 0)
+                throw new ArgumentException($"Este conductor ya tiene un horario asignado para el dia {conductorHorario.Fecha.ToShortDateString()}.");
+
+            conductorHorario.IdConductorHorario = _repositorioConductorHorario.Insertar(conductorHorario);
+
+            if (conductorHorario.IdConductorHorario > 0)
+                busHorarioDto.IdBusHorario = _repositorioBusHorario.Insertar(busHorario);
+            else
+                throw new ArgumentException($"No se logro guardar la información de la programación.");
 
             return busHorarioDto;
         }
@@ -113,8 +147,8 @@ namespace Mectronics.SistemaGestionTransporte.Servicio.Servicios
             if (busHorario.Fecha == default)
                 throw new ArgumentException("La fecha del horario es inválida.");
 
-            if (string.IsNullOrWhiteSpace(busHorario.DiaSemana))
-                throw new ArgumentException("El día de la semana no puede estar vacío.");
+            //if (string.IsNullOrWhiteSpace(busHorario.DiaSemana))
+            //    throw new ArgumentException("El día de la semana no puede estar vacío.");
 
             if (busHorario.HoraEntrada == default)
                 throw new ArgumentException("La hora de entrada es inválida.");

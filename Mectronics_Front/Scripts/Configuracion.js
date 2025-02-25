@@ -3,6 +3,7 @@ const URL_API_BUS = "https://localhost:7116/api/bus"
 const URL_API_CONDUCTOR = "https://localhost:7293/api/conductor"
 const URL_API_ESTADO_BUS = "https://localhost:7047/api/estadobus"
 const URL_API_ESTADO_CONDUCTORES = "https://localhost:7021/api/estadoconductor"
+const URL_API_BUS_HORARIOS = "https://localhost:7115/api/bushorario"
 
 function configurarMenu()
 {
@@ -49,4 +50,12 @@ function cerrarModal(nombremodal) {
     if (modalInstance) {
         modalInstance.hide(); // Cierra la modal
     }
+}
+
+function DefinirFechaHora(fecha, tiempo){
+    const [hora, minutos] = tiempo.split(':');
+    var fechaCompleta = new Date(fecha);
+    fechaCompleta.setHours(parseInt(hora, 10), parseInt(minutos, 10), 0, 0);
+
+    return fechaCompleta;
 }
